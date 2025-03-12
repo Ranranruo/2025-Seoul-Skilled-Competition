@@ -7,6 +7,7 @@
     color: inherit;
     font-size: 1em;
 }
+textarea {border: none; padding: 50px; resize: none; outline: none;}
 .f { display: flex; }
 .g { display: grid; }
 
@@ -83,6 +84,16 @@
 
 .oh { overflow: hidden; }
 
+.hs { transition: .3s; }
+.hs:hover { scale: 1.05; }
+
+.hcm { transition: .3s; }
+.hcm:hover { color: #DF1C46; }
+
+.hcb { transition: .3s; }
+.hcb:hover { color: #333; }
+
+
 .slider {
     animation: slider 10s infinite;
     animation-play-state: running;
@@ -112,3 +123,6 @@
     color: #fff;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
 }
+
+#asd {display: none;}
+:has(#aaa:hover) #asd {display: flex;}
