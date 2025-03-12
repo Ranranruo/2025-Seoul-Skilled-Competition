@@ -1,0 +1,24 @@
+1. 일러스트
+
+2. css 클래스
+    reset
+    textarea,input
+    .w.h
+    .df.j?.a? 
+    .p? // position
+    .g5 ~ 40
+    .f12 ~ 40
+    .b5 ~ 30, 50 100
+    .c?
+    .b?
+    .p50~200
+    .t.st.section
+    .bi
+    .hcm.hs
+
+3. html
+    sub02 => 전체
+    sub03 => 인기
+    sub04 => 장바구니
+    index => 메인
+    sub01 => 소개
