@@ -1,0 +1,273 @@
+*{ padding: 0; margin: 0; text-decoration: none; list-style: none; color: inherit; font-size: 1em; box-sizing: border-box;}
+:root {color:#333}
+textarea, input, button { outline: none; border: none; }
+textarea { padding: 50px; }
+
+
+.inner { max-width: 1700px; min-width: 480px; margin: 0 auto; padding: 0 10px; width: 100%;}
+.s { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.t { font-size: 38px; font-weight: bold; color:#ff2857;}
+.st { font-size: 28px; font-weight: bold; color:#E1A930;}
+
+.w {width: 100%;} .h{height: 100%;}
+
+.df{ display: flex;} .js{ justify-content: start;} .je{justify-content: end;} .jse {justify-content: space-evenly;} .jsb{ justify-content: space-between;} .jc{ justify-content: center;}
+.fc { flex-direction: column;}
+.as {align-items: start;} .ae { align-items: end;} .ac {align-items: center;}
+.fw{flex-wrap: wrap;}
+
+.pr{ position: relative;}
+.pf{ position: fixed;}
+.pa{ position: absolute;}
+
+.g5{gap: 5px;}
+.g10{gap: 10px;}
+.g15{gap: 15px;}
+.g20{gap: 20px;}
+.g25{gap: 25px;}
+.g30{gap: 30px;}
+.g35{gap: 35px;}
+.g40{gap: 40px;}
+
+.f10{ font-size: 10px;}
+.f12{ font-size: 12px;}
+.f14{ font-size: 14px;}
+.f16{ font-size: 16px;}
+.f18{ font-size: 18px;}
+.f20{ font-size: 20px;}
+.f22{ font-size: 22px;}
+.f24{ font-size: 24px;}
+.f26{ font-size: 26px;}
+.f28{ font-size: 28px;}
+.f30{ font-size: 30px;}
+.f32{ font-size: 32px;}
+.f34{ font-size: 34px;}
+.f36{ font-size: 36px;}
+.f38{ font-size: 38px;}
+.f40{ font-size: 40px;}
+.f42{ font-size: 42px;}
+.f44{ font-size: 44px;}
+.f46{ font-size: 46px;}
+.f48{ font-size: 48px;}
+.f50{ font-size: 50px;}
+
+.b { font-weight: 900;}
+
+.bx { box-shadow: rgba(0, 0, 0, .2);}
+
+.b5 {border-radius: 5px;}
+.b10 {border-radius: 10px;}
+.b15 {border-radius: 15px;}
+.b20 {border-radius: 20px;}
+.b25 {border-radius: 25px;}
+.b30 {border-radius: 30px;}
+.b50 {border-radius: 50px;}
+.b100 {border-radius: 100px;}
+
+.cm { color: #ff2857; }
+.cm2 { color: #C11F45; }
+.cs { color: #E1A930; }
+.cb { color: #333; }
+.cw { color: #fff; }
+.cg { color: #bbb; }
+
+.bm { background-color: #ff2857; }
+.bm2 { background-color: #C11F45; }
+.bs { background-color: #E1A930; }
+.bb { background-color: #333; }
+.bg {background-color: #bbb;}
+.bw {background-color: #fff;}
+
+.p50{ padding: 50px; }
+.p100{ padding: 100px; }
+.p150{ padding: 150px; }
+.p200{ padding: 200px; }
+
+
+
+
+.bi { background-size: cover; background-position: center; background-repeat: no-repeat;}
+
+.hcm:hover{ color: #ff2857;}
+.hd:hover{ filter: brightness(.9);}
+.hb:hover {filter: brightness(1.15);}
+.hs:hover{ scale: 1.05;}
+.ho5 {opacity: .5;}
+.ho5:hover {opacity: 1;}
+.cp{ cursor: pointer; }
+.pn {pointer-events: none;}
+.oh{ overflow: hidden;}
+
+.z0 {z-index: 0;}
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
+.z3 {z-index: 3;}
+.z100 { z-index: 99999999999;}
+
+.ani {
+    background-color: rgba(201, 34, 70, 0.8);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999999999999999;
+    width: 100%;
+    height: 100%;
+    animation: ani 4s forwards;
+}
+.ani p {
+    animation: loading .7s infinite;
+}
+.ani > p:nth-last-of-type(2) { animation-delay: .1s; }
+.ani > p:nth-last-of-type(3) { animation-delay: .2s; }
+.ani > p:nth-last-of-type(4) { animation-delay: .3s; }
+.ani > p:nth-last-of-type(5) { animation-delay: .4s; }
+.ani > p:nth-last-of-type(6) { animation-delay: .5s; }
+.ani > p:nth-last-of-type(7) { animation-delay: .6s; }
+
+@keyframes loading {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes ani {
+    0% {
+        opacity: 1;
+        z-index: 9999999999999999999999999999999999999;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes slide {
+    0% { translate: 0% 0 }
+    30% { translate: 0% 0 }
+    33% { translate: -25% 0 }
+    63% { translate: -25% 0 }
+    66% { translate: -50% 0 }
+    96% { translate: -50% 0 }
+    100% { translate: -75% 0; }
+}
+
+@keyframes card1 {
+    0% { bottom: 200px; filter: brightness(1.5); }
+    30% { bottom: 200px; filter: brightness(1.5); }
+    33% { bottom: 0px; filter: brightness(1);}
+    63% { bottom: 0px;filter: brightness(1); }
+    66% { bottom: 0px;filter: brightness(1); }
+    96% { bottom: 0px;filter: brightness(1); }
+    100% { bottom: 200px;filter: brightness(1.5); }
+}
+
+@keyframes card2 {
+    0% { bottom: 0px; filter: brightness(1); }
+    30% { bottom: 0px; filter: brightness(1); }
+    33% { bottom: 200px; filter: brightness(1.5);}
+    63% { bottom: 200px;filter: brightness(1.5); }
+    66% { bottom: 0px;filter: brightness(1); }
+    96% { bottom: 0px;filter: brightness(1); }
+    100% { bottom: 0px;filter: brightness(1); }
+}
+
+@keyframes card3 {
+    0% { bottom: 0; filter: brightness(1); }
+    30% { bottom: 0; filter: brightness(1); }
+    33% { bottom: 0px; filter: brightness(1);}
+    63% { bottom: 0px;filter: brightness(1); }
+    66% { bottom: 200px;filter: brightness(1.5); }
+    96% { bottom: 200px;filter: brightness(1.5); }
+    100% { bottom: 0;filter: brightness(1); }
+}
+
+
+#card1 { animation: card1 10s infinite;}
+#card2 { animation: card2 10s infinite;}
+#card3 { animation: card3 10s infinite;}
+
+#aab { height: 0px; }
+
+:has(#aaa:hover) #aab {height: 100px; transition: .3s;} 
+
+#aac { animation: slide 10s infinite; }
+
+:has(#aad:hover) :where(.card, #aac) { animation-play-state: paused; }
+
+.price > p {
+    color: #333;
+    font-weight: bold;
+}
+.sale {position: relative;}
+.price:has(.sale) > .sale::after {
+    content: '원';
+    /* position: absolute;/ */
+    left: 100%;
+}
+.price:not(:has(.sale)) > .origin::after {
+    content: '원';
+    left: 100%;
+}
+
+.price:has(.sale) > .origin {
+    position: relative;
+    text-decoration: line-through;
+    color: #bbb;
+    font-weight: 100;
+}
+
+.baf * {
+    transition: .3s;
+}
+
+.baf > :first-child:has(div:hover) > :not(:hover){
+    opacity: 0;
+}
+:has(.baa:hover) #baa { z-index: 1; }
+:has(.bab:hover) #bab { z-index: 1; }
+:has(.bac:hover) #bac { z-index: 1; }
+:has(.bad:hover) #bad { z-index: 1; }
+:has(.bae:hover) #bae { z-index: 1; }
+
+.baf::after {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    opacity: 0;
+    z-index: 100000;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+}
+
+:has(.baa:hover) .baf::after {
+    content: '고객신뢰를 바탕으로 행복한 사회를 추구하는 글로벌 기업';
+    opacity: 1;
+}
+
+:has(.bab:hover) .baf::after {
+    content: '기업의 가치 혁신의 출발은 나눔을 시작으로 고객 가치를 탐험한다.';
+    opacity: 1;
+}
+
+:has(.bac:hover) .baf::after {
+    content: '세계 기후변화 대응을 위해 100% 재생에너지로 생산된 제품만 선별한다.';
+    opacity: 1;
+}
+
+:has(.bad:hover) .baf::after {
+    content: '다른 생각 다른 미래, 플랫폼 기반의 글로벌 미래 혁신을 선도한다.';
+    opacity: 1;
+}
+
+:has(.bae:hover) .baf::after {
+    content: '글로벌 수준의 개인정보보호 및 보안 체계를 유지한다.';
+    opacity: 1;
+}

@@ -11,7 +11,7 @@ textarea { padding: 50px; }
 
 .w {width: 100%;} .h{height: 100%;}
 
-.df{ display: flex;} .js{ justify-content: start;} .je{justify-content: end;} .jse {justify-content: space-evenly;} .jsb{ justify-content: space-between;}
+.df{ display: flex;} .js{ justify-content: start;} .je{justify-content: end;} .jse {justify-content: space-evenly;} .jsb{ justify-content: space-between;} .jc{ justify-content: center;}
 .fc { flex-direction: column;}
 .as {align-items: start;} .ae { align-items: end;} .ac {align-items: center;}
 .fw{flex-wrap: wrap;}
@@ -29,6 +29,7 @@ textarea { padding: 50px; }
 .g35{gap: 35px;}
 .g40{gap: 40px;}
 
+.f10{ font-size: 10px;}
 .f12{ font-size: 12px;}
 .f14{ font-size: 14px;}
 .f16{ font-size: 16px;}
@@ -44,8 +45,15 @@ textarea { padding: 50px; }
 .f36{ font-size: 36px;}
 .f38{ font-size: 38px;}
 .f40{ font-size: 40px;}
+.f42{ font-size: 42px;}
+.f44{ font-size: 44px;}
+.f46{ font-size: 46px;}
+.f48{ font-size: 48px;}
+.f50{ font-size: 50px;}
 
 .b { font-weight: 900;}
+
+.bx { box-shadow: rgba(0, 0, 0, .2);}
 
 .b5 {border-radius: 5px;}
 .b10 {border-radius: 10px;}
@@ -68,6 +76,7 @@ textarea { padding: 50px; }
 .bs { background-color: #E1A930; }
 .bb { background-color: #333; }
 .bg {background-color: #bbb;}
+.bw {background-color: #fff;}
 
 .p50{ padding: 50px; }
 .p100{ padding: 100px; }
@@ -93,6 +102,49 @@ textarea { padding: 50px; }
 .z1 {z-index: 1;}
 .z2 {z-index: 2;}
 .z3 {z-index: 3;}
+.z100 { z-index: 99999999999;}
+
+.ani {
+    background-color: rgba(201, 34, 70, 0.8);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999999999999999;
+    width: 100%;
+    height: 100%;
+    animation: ani 4s forwards;
+}
+.ani p {
+    animation: loading .7s infinite;
+}
+.ani > p:nth-last-of-type(2) { animation-delay: .1s; }
+.ani > p:nth-last-of-type(3) { animation-delay: .2s; }
+.ani > p:nth-last-of-type(4) { animation-delay: .3s; }
+.ani > p:nth-last-of-type(5) { animation-delay: .4s; }
+.ani > p:nth-last-of-type(6) { animation-delay: .5s; }
+.ani > p:nth-last-of-type(7) { animation-delay: .6s; }
+
+@keyframes loading {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes ani {
+    0% {
+        opacity: 1;
+        z-index: 9999999999999999999999999999999999999;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
 
 
 @keyframes slide {
@@ -152,9 +204,21 @@ textarea { padding: 50px; }
     color: #333;
     font-weight: bold;
 }
+.sale {position: relative;}
+.price:has(.sale) > .sale::after {
+    content: '원';
+    /* position: absolute;/ */
+    left: 100%;
+}
+.price:not(:has(.sale)) > .origin::after {
+    content: '원';
+    left: 100%;
+}
 
-.price:has(.origin) > .origin {
+.price:has(.sale) > .origin {
+    position: relative;
     text-decoration: line-through;
     color: #bbb;
     font-weight: 100;
 }
+
