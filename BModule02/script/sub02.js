@@ -24,3 +24,4 @@ $$btns.forEach($btn => $btn.addEventListener("click", (event) => {
     adEvents[evnetName]();
     console.log($ad.playbackRate);
 }));
+
