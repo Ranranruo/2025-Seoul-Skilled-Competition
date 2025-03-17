@@ -25,3 +25,47 @@ $$btns.forEach($btn => $btn.addEventListener("click", (event) => {
     console.log($ad.playbackRate);
 }));
 
+const state = {
+    category: null,
+    buyList: [
+
+    ]
+};
+
+const render = async () => {
+    const category = state.category;
+
+    const data = await fetch("./json/sub02.json").then(data => data.json());
+    const filteredData = category == null ? data : data.filter(data => data.name == category);
+    const reducedData = filteredData.reduce((acc, data) => {
+        return [...acc, ...data.data];
+    }, []);
+    const html = reducedData.reduce((acc, data, idx) => {
+        const price = data.price.split(" ");
+        return acc +`
+             <div class="df fc g10" style="width: 250px;">
+                <img src='./images/image${idx >= 2 ? idx + 2 : idx + 1 }.png');' class="bi b5 df fc" style="width: 250px; aspect-ratio: 1/1; background-image: url(' margin-bottom: 5px;">
+                    <div class="df fc g5">
+                        <div>
+                            <p class="f18 b s">${data.name}</p>
+                            <p class="f12 cg s">${data.desc}</p>
+                        </div>
+                        <div>
+                            <div class="df ac g5 price">
+                                <p class="f18 origin">${price[0]}</p>
+                                ${price[1] ? `<div class="f18 sale b">${price[1]}</div>` : ''}
+                                ${price[1] ? `<div class="cw bm b5 f12 b" style="padding: 2px 10px">SALE</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        `;
+    }, '');
+    document.querySelector("#allp").innerHTML = html;
+    document.querySelectorAll("#allp > div").forEach(el => el.addEventListener("mousedown", ()=> {
+        console.log("a");
+    }))
+}
+
+
+render();

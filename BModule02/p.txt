@@ -19,3 +19,7 @@
 <div class="b5 df bm cw c20" style="padding: 15px"><p style="width: 100px">4단계</p><p style="width: 100px;">품평회</p><p>공정한 평가를 위해 상품력, 기획력, 영업력, 판촉력 등의 항목을 기준으로 내부 품평회를 진행합니다.</o
 <div class="b5 df bm cw c20" style="padding: 15px"><p style="width: 100px">5단계</p><p style="width: 100px;">신용평가</p><p>입점확정 협력사의 경우 신뢰있는 거래를 위해 신용평가를 받고 있습니다.</o
 <div class="b5 df bm cw c20" style="padding: 15px"><p style="width: 100px">6단계</p><p style="width: 100px;">계약체결</p><p>전자계약서(또는 수기계약서)를 통해 거래계약서와 관련서류를 작성하시면 입점절차가 완료됩니다.</o
+
+
+
+
