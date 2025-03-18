@@ -1,0 +1,4 @@
+CREATE TABLE Cart (
+    idx BIGINT PRIMARY KEY AUTO_INCREMENT,
+    
+);
