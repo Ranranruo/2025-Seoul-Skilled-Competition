@@ -2,7 +2,7 @@
 :root {color:#333}
 textarea, input, button { outline: none; border: none; }
 textarea { padding: 50px; }
-
+main { min-height: 100vh;}
 
 .inner { max-width: 1700px; min-width: 480px; margin: 0 auto; padding: 0 10px; width: 100%;}
 .s { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }

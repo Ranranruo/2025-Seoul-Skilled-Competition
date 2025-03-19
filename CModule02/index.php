@@ -308,19 +308,24 @@
                 </div>
             </div>
             </section>
-            <section class="bm b50 df fc ac" style="margin: 0 auto; width: 1500px; margin-top: 50px;">
+            <section class="bm b50 df fc ac pr" style="margin: 0 auto; width: 1500px; margin-top: 50px;">
+                <div class="buttons pa df g10" style="top: 50px; right: 50px; z-index: 1"><button class="b bm2 cw cp b5 notices-order" style="padding: .5em 1em;" data-order="desc">DESC</button><button class="b bm2 cw cp b5 notices-order" style="padding: .5em 1em;" data-order="asc">ASC</button></div>
                 <h1 class="cw f40 b" style="padding-top: 30px;">공지사항</h1>
                 <div class="df fc ac w" style="padding: 40px">
-                    <div class="df fc w p50 oh" style="height: 350px;">
+                    <div class="df fc js w oh" style="height: 300px; padding: 0 50px;">
                         <div class="notices df fc">
-                            <?php $notices = DB::fetchAll("SELECT * FROM Notice ORDER BY DESC date") ?>
+                            <?php $notices = DB::fetchAll("SELECT * FROM Notice ORDER BY date DESC") ?>
                             <?php foreach ($notices as $key => $notice) : ?>
-                                <div class="w df jsb bw" style="height: 50px; padding: 10px; border-bottom: 2px solid #bbb;"><div><?=$notice->type?></div><div><?=$notice->text?></div><div><?=$notice->date?></div></div>
+                                <div class="notice w df jsb bw desc" style="height: 50px; padding: 10px; border-bottom: 2px solid #bbb;"><div><?=$notice->type?></div><div><?=$notice->text?></div><div><?=$notice->date?></div></div>
+                                <?php endforeach; ?>
+                                <?php $notices = DB::fetchAll("SELECT * FROM Notice ORDER BY date ASC") ?>
+                            <?php foreach ($notices as $key => $notice) : ?>
+                                <div class="notice w df jsb bw asc" style="height: 50px; padding: 10px; border-bottom: 2px solid #bbb;"><div><?=$notice->type?></div><div><?=$notice->text?></div><div><?=$notice->date?></div></div>
                                 <?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="df g10 cw ac"><p class="f24 cp">◀</p><div class="df g10">
-                    </div><p class="f24 cp">▶</p></div>
+                    <div class="df g10 cw ac"><p class="f24 cp notice-btn" data-event="minus">◀</p><div class="df g10">
+                    </div><p class="f24 cp notice-btn" data-event="plus">▶</p></div>
                 </div>
             </section>
             <section class="p100">
@@ -400,5 +405,8 @@
         <p class="cw b" style="font-size: 100px;">N</p>
         <p class="cw b" style="font-size: 100px;">G</p>
     </div> -->
+    <script src="script/index.js">
+        
+    </script>
 </body>
 </html>

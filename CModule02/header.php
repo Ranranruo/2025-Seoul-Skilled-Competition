@@ -1,5 +1,6 @@
 <?php
 require_once "DB.php";
+require_once "lib.php";
 session_start();
 $member = $_SESSION['member'] ?? null;
 ?>
@@ -23,7 +24,10 @@ $member = $_SESSION['member'] ?? null;
                     <?= $member == null ? '<div class="df f14 g10 je"><a href="?type=login">로그인</a><a href="?type=register">회원가입</a></div>' : 
                     '<div class="df f14 g10 je"><p href="?type=login">'. $member->name. '</p><a href="memberCtrl.php?action=logout">로그아웃</a></div>'
                     ?>
-                    <div class="df f20 g20"><a href="#">장바구니</a><div class="df fc oh ac" id="caa"><a href="#">관리자</a><a href="sub05.php">공지사항관리</a><a href="">b</a></div></div>
+                    <div class="df f20 g20">
+                        <a href="#">장바구니</a>
+                        
+                        <?= $member->id ?? null == "admin" ? '<div class="df fc oh ac" id="caa"><a href="#">관리자</a><a href="manageNotice.php">공지사항관리</a><a href="manageProduct.php">판매상품관리</a></div>' : '' ?>
                 </div>
             </div>
 </header>
