@@ -14,42 +14,18 @@
             <section class="inner df fc g40">
                 <h1 class="t">장바구니</h1>
                 <div class="df fc g40">
-                    <div class="df jse ac">
+                    <form class="df jse ac">
                         <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
+                            <input class="bi b5 bg" style="width: 120px; aspect-ratio: 1/1;" type="file" placeholder="상품사진">
+                            <div class="df fc g5">
+                                <input class="f20" placeholder="상품명"/>
+                                <input class="f14 cg" style="width: 300px;" placeholder="상품 설명"/>
+                            </div>
                         </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
+                        <input class="f22" type="number" placeholder="상품가격"/>
+                        <input class="f22" type="number" placeholder="세일된 가격"/>
                         <div class="f26 b">\130,000 원</div>
-                    </div>
-                    <div class="df jse ac">
-                        <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
-                        </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
-                    </div>
-                    <div class="df jse ac">
-                        <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
-                        </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
-                    </div>
-                    <div class="df jse ac">
-                        <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
-                        </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
-                    </div>
+                    </form>
                 </div>
                 <div class="df fc g10 ae" style="align-self: flex-end;">
                     <p class="f22 cg">520,000 원</p>
