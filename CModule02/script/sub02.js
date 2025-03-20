@@ -20,9 +20,9 @@ const adEvents = {
 
 // 이벤트 적용
 $$btns.forEach($btn => $btn.addEventListener("click", (event) => {
+    
     const evnetName = event.target.dataset.event;
     adEvents[evnetName]();
-    console.log($ad.playbackRate);
 }));
 
 
@@ -59,12 +59,15 @@ for(let i = 0; i < 6; i++) {
  state.uuid += str.charAt(Math.random() * str.length);
 }
 $uuid.innerText = `ID: ${state.uuid}`;
-console.log(document.querySelectorAll(".modal-toggle"));
 document.querySelectorAll(".modal-toggle").forEach(el => el.addEventListener("click", () => $modal.classList.toggle("dn")));
 const render = async () => {
     const category = state.category;
-
-    const data = await fetch("./json/sub02.json").then(data => data.json());
+    const notRefinedData = await fetch("/productCtrl.php?action=select_all").then(data=>data.json());
+    const data = [{name: "건강식품", data: []}, {name: "디지털", data: []}, {name: "팬시", data: []}, {name: "향수", data: []}, {name: "헤어케어", data: []}];
+    notRefinedData.forEach(refinedData => {
+        const idx = data.findIndex(data => data.name == refinedData.category);
+        data[idx].data.push(refinedData);
+    });
     //start
     (()=> {
     const filteredData = category == null ? data : data.filter(data => data.name == category);
@@ -75,8 +78,6 @@ const render = async () => {
         const price = data.price.split(" ");
         return acc + htmlByData(data, price);
     }, '');
-
-
 
     document.querySelector("#allp").innerHTML = html;
     document.querySelectorAll("#allp > div").forEach(el => {
@@ -132,7 +133,7 @@ const htmlByData = (data, price, count = null) => {
                     <div class="df fc g5">
                         <div>
                             <p class="f18 b s">${data.name}</p>
-                            <p class="f12 cg s">${data.desc}</p>
+                            <p class="f12 cg s">${data.description}</p>
                         </div>
                         <div>
                             <div class="df ac g5 price">
@@ -171,4 +172,3 @@ const checkInsideBuyArea = (event) => {
 
 
 render();
-

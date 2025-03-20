@@ -12,24 +12,73 @@
     <?= require_once "header.php" ?>
         <main style="padding-top: 200px;">
             <section class="inner df fc g40">
-                <h1 class="t">장바구니</h1>
+                <h1 class="t">판매상품관리[관리자]</h1>
                 <div class="df fc g40">
-                    <form class="df jse ac">
+                    <form class="df jse ac" action="productCtrl.php" method="post" enctype="multipart/form-data">
+                        <input type="text" name="img" hidden>
+                        <input required type="text" name="action" value="insert" hidden>
                         <div class="df g20 ac">
-                            <input class="bi b5 bg" style="width: 120px; aspect-ratio: 1/1;" type="file" placeholder="상품사진">
+                            <input required class="bi b5 bg" style="width: 120px; aspect-ratio: 1/1;" type="file" placeholder="상품사진" name="fakeImg" type="image/*">
                             <div class="df fc g5">
-                                <input class="f20" placeholder="상품명"/>
-                                <input class="f14 cg" style="width: 300px;" placeholder="상품 설명"/>
+                                <input required class="f20" placeholder="상품명" name="name"/>
+                                <input required class="f14 cg" style="width: 300px;" placeholder="상품 설명" name="description"/>
                             </div>
                         </div>
-                        <input class="f22" type="number" placeholder="상품가격"/>
-                        <input class="f22" type="number" placeholder="세일된 가격"/>
-                        <div class="f26 b">\130,000 원</div>
+                        <input required class="f22" type="number" placeholder="상품가격" min="0" name="price"/>
+                        <select required class="f22 b5 bx bn" style="padding: .5em 1em;" name="category">
+                            <option value="건강식품">건강식품</option>
+                            <option value="디지털">디지털</option>
+                            <option value="팬시">팬시</option>
+                            <option value="향수">향수</option>
+                            <option value="헤어케어">헤어케어</option>
+                        </select>
+                        <select required class="f22 b5 bx bn" style="padding: .5em 1em;" placeholder="세일" name="sale">
+                            <option value="일반">일반상품</option>
+                            <option value="만원">만원할인(인기)</option>
+                            <option value="10퍼">10%할인(인기)</option>
+                            <option value="30퍼">30%할인(인기)</option>
+                        </select>
+                        <div class="f26 b">
+                            <button class="b10 bm cw f20" style="padding: .5em 1em;">추가</button>
+                        </div>
                     </form>
-                </div>
-                <div class="df fc g10 ae" style="align-self: flex-end;">
-                    <p class="f22 cg">520,000 원</p>
-                    <button class="bm cw b b10" style="padding: .5em 5em;">구매하기</button>
+                    <?php
+                        $products = DB::fetchAll("SELECT * FROM Product");
+                        foreach($products as $product): 
+                    ?>
+                    <form class="df jse ac" action="productCtrl.php" method="post" enctype="multipart/form-data">
+                        <input type="text" hidden value="<?=$product->idx?>" name="idx">
+                        <input type="text" name="img" hidden value="<?=$product->img?>">
+                        <input required type="text" name="action" value="update" hidden>
+                        <div class="df g20 ac">
+                            <div class="bi b5 bg" style="width: 120px; aspect-ratio: 1/1; background-image: url('<?=$product->img?>')">
+                                <input type="file" placeholder="상품사진" name="fakeImg" type="image/*">
+                            </div>
+                            <div class="df fc g5">
+                                <input required class="f20" placeholder="상품명" name="name" value="<?=$product->name?>"/>
+                                <input required class="f14 cg" style="width: 300px;" placeholder="상품 설명" name="description" value="<?=$product->description?>"/>
+                            </div>
+                        </div>
+                        <input required class="f22" type="number" placeholder="상품가격" min="0" name="price" value="<?=$product->price?>"/>
+                        <select required class="f22 b5 bx bn" style="padding: .5em 1em;" name="category">
+                            <option <?=$product->category == "건강식품" ? 'selected' : ''?> value="건강식품">건강식품</option>
+                            <option <?=$product->category == "디지털" ? 'selected' : ''?> value="디지털">디지털</option>
+                            <option <?=$product->category == "팬시" ? 'selected' : ''?> value="팬시">팬시</option>
+                            <option <?=$product->category == "향수" ? 'selected' : ''?> value="향수">향수</option>
+                            <option <?=$product->category == "헤어케어" ? 'selected' : ''?> value="헤어케어">헤어케어</option>
+                        </select>
+                        <select required class="f22 b5 bx bn" style="padding: .5em 1em;" placeholder="세일" name="sale">
+                            <option <?=$product->sale == "일반" ? "selected" : ''?> value="일반">일반상품</option>
+                            <option <?=$product->sale == "만원" ? "selected" : ''?> value="만원">만원할인(인기)</option>
+                            <option <?=$product->sale == "10퍼" ? "selected" : ''?> value="10퍼">10%할인(인기)</option>
+                            <option <?=$product->sale == "30퍼" ? "selected" : ''?> value="30퍼">30%할인(인기)</option>
+                        </select>
+                        <div class="f26 b df fc g10">
+                            <button class="b10 bg cw f20" style="padding: .5em 1em;">수정</button>
+                            <a href="productCtrl.php?action=delete&idx=<?=$product->idx?>" class="b10 bm cw f20 l" style="padding: .5em 1em;">삭제</a>
+                        </div>
+                    </form>
+                    <?php endforeach; ?>
                 </div>
             </section>
         </main>
@@ -62,5 +111,17 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.querySelectorAll("form").forEach(form => form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const reader = new FileReader();
+            if(!e.target.fakeImg.files[0]) e.target.submit();
+            reader.readAsDataURL(e.target.fakeImg.files[0]);
+            reader.onload = async () => {
+                e.target.img.value = reader.result;
+                e.target.submit();
+            }
+        }));
+    </script>
 </body>
 </html>

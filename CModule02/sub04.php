@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,45 +14,24 @@
             <section class="inner df fc g40">
                 <h1 class="t">장바구니</h1>
                 <div class="df fc g40">
+                    <?php
+                    $data = DB::fetchAll("SELECT *, cart.idx as cart_idx FROM Cart JOIN Product ON Cart.product_idx = Product.idx AND Cart.member_idx = ?", [$member->idx]);
+                    foreach ($data as $cart):
+                    ?>
                     <div class="df jse ac">
                         <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
+                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('<?=$cart->img?>');"></div>
+                            <div class="df fc g5"><h1 class="f20"><?=$cart->name?></h1><p class="f14 cg" style="width: 300px;"><?=$cart->description?></p></div>
                         </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
+                        <div class="df ac g40"><a href="cartCtrl.php?action=minus&idx=<?=$cart->cart_idx?>" class="f24 b">-</a><p class="f24 b"><?=$cart->product_count?></p><a href="cartCtrl.php?action=plus&idx=<?=$cart->cart_idx?>" class="f24 b">+</a></div>
+                        <div class="f22">\<?=number_format($cart->price);?>원</div>
+                        <div class="f26 b">\<?=number_format($cart->price * $cart->product_count)?>원</div>
                     </div>
-                    <div class="df jse ac">
-                        <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
-                        </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
-                    </div>
-                    <div class="df jse ac">
-                        <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
-                        </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
-                    </div>
-                    <div class="df jse ac">
-                        <div class="df g20 ac">
-                            <div class="bi b5" style="width: 120px; aspect-ratio: 1/1; background-image: url('./images/image1.png');"></div>
-                            <div class="df fc g5"><h1 class="f20">이뮨 멀티비타민&미네랄</h1><p class="f14 cg" style="width: 300px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
-                        </div>
-                        <div class="df ac g40"><p class="f24 b">-</p><p class="f24 b">2</p><p class="f24 b">+</p></div>
-                        <div class="f22">\65,000 원</div>
-                        <div class="f26 b">\130,000 원</div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="df fc g10 ae" style="align-self: flex-end;">
-                    <p class="f22 cg">520,000 원</p>
+                    <?php $totalPrice = DB::fetch("SELECT SUM(product.price * cart.product_count) AS totalPrice FROM Cart JOIN Product ON Cart.product_idx = Product.idx WHERE Cart.member_idx = ?", [$member->idx])?>
+                    <p class="f22 cg"><?=$totalPrice->totalPrice?> 원</p>
                     <button class="bm cw b b10" style="padding: .5em 5em;">구매하기</button>
                 </div>
             </section>
