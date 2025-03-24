@@ -1,0 +1,157 @@
+* { padding: 0; margin: 0; border: none; text-decoration: none; list-style: none; box-sizing: border-box; color: inherit; outline: none; }
+.txt { text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+button, a{ cursor: pointer;}
+:root{color: #333}
+.t {font-size: 35px; color: #333; font-weight: 900; padding: 50px 0}
+.w{ width: 100%;} .h{height: 100%;} .wh{inset: 0;}
+.df {display: flex;} .js{ justify-content: start;} .je{justify-content: end;} .jc{justify-content: center;} .jsb{justify-content: space-between;} .jse{justify-content: space-evenly;}
+.fc {flex-direction: column;}.as{align-items: start;}.ae{align-items: end;}.ac{align-items: center;}
+.g5{gap: 5px;}
+.g10{gap: 10px;}
+.g15{gap: 15px;}
+.g20{gap: 20px;}
+.g25{gap: 25px;}
+.g30{gap: 30px;}
+.g35{gap: 35px;}
+.g40{gap: 40px;}
+.g45{gap: 45px;}
+.g50{gap: 50px;}
+.g55{gap: 55px;}
+.g60{gap: 60px;}
+
+.tc {display: flex; justify-content: center; align-items: center;}
+
+.cp{cursor: pointer;}
+
+.f10{font-size: 10px;}
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f22{font-size: 22px;}
+.f24{font-size: 24px;}
+.f26{font-size: 26px;}
+.f28{font-size: 28px;}
+.f30{font-size: 30px;}
+.f32{font-size: 32px;}
+.f34{font-size: 34px;}
+.f36{font-size: 36px;}
+.f38{font-size: 38px;}
+.f40{font-size: 40px;}
+.f42{font-size: 42px;}
+.f44{font-size: 44px;}
+.f46{font-size: 46px;}
+.f48{font-size: 48px;}
+.f50{font-size: 50px;}
+
+.cm { color: #ff2857 }
+.cm2 { color: #e4254e }
+.cs { color: #E1A930}
+.cw{ color: #fff}
+.cb{ color:#333}
+.cg{ color: #bbb}
+
+.bx{ box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);}
+
+.b5{border-radius: 5px;}
+.b10{border-radius: 10px;}
+.b15{border-radius: 15px;}
+.b20{border-radius: 20px;}
+.b25{border-radius: 25px;}
+.b30{border-radius: 30px;}
+.b35{border-radius: 35px;}
+.b40{border-radius: 40px;}
+.b45{border-radius: 45px;}
+.b50{border-radius: 50px;}
+.b100{border-radius: 100px;}
+
+.inner { width: 1400px; margin:0 auto; padding: 0 10px}
+
+.bm { background-color: #ff2857 }
+.bm2 { background-color: #c92448 }
+.bs { background-color: #E1A930}
+.bw{ background-color: #fff}
+.bb{ background-color:#333}
+.mg{ background-color: #bbb}
+
+.btn { padding: .5em 1em;border-radius: 5px; }
+
+.z0{ z-index: 0;}
+.z1{ z-index: 1;}
+.z2{ z-index: 2;}
+.z3{ z-index: 3;}
+.z4{ z-index: 4;}
+.z999{ z-index: 999999999999999999999999999;}
+
+.pr{position: relative;}
+.pa{position: absolute;}
+.pf{position: fixed;}
+.tl {top: 0; left: 0;}
+.br{ bottom: 0; right: 0;}
+
+.oh{ overflow: hidden;}
+
+.bi {background-position: center; background-repeat: no-repeat; background-size: cover;}
+.b {font-weight: 900;}
+.l {font-weight: 100;}
+
+.fw{flex-wrap: wrap;}
+
+.ar {aspect-ratio: 1/1;}
+
+#aaa {
+    height: 100px;
+    transition: .3s;
+}
+.menu:hover #aaa {
+    height: 200px;
+}
+.menu > *:hover {
+    color: #ff2857;
+}
+.menu a:hover {
+    color:#c92448;
+}
+
+@keyframes s {
+    0%{translate: 0 0;}
+    30%{translate: 0 0;}
+    33%{translate: -25% 0;}
+    63%{translate: -25% 0;}
+    66%{translate: -50% 0;}
+    96%{translate: -50% 0;}
+    100%{translate: -75% 0;}
+}
+#aab {
+    animation: s 10s infinite;
+}
+#aab:hover {
+    animation-play-state: paused;
+}
+
+:has(.sale) .origin {
+    font-weight: 500;
+    color: #bbb;
+    text-decoration: line-through;
+}
+:has(.sale) .sale::before {
+}
+:has(.sale) .sale::after {
+    content: '원';
+}
+.price:has(.sale)::after{
+    content: 'SALE';
+    background-color: #ff2857;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2em 1em;
+    font-weight: bold;
+    border-radius: 5px;
+}
+:not(:has(.sale)) .origin::after{
+    content: '';   
+}
