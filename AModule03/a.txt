@@ -16,3 +16,32 @@ const render = async () => {
                 document.querySelector("#products").innerHTML = html;
             }
             render();
+
+
+
+             const render = async () => {
+                const priceHTML = (price, sale) => {
+                    if(typeof price == 'string') price = parseInt(price.replaceAll(",", ""));
+                    if(sale == null) return `<p class="origin">${price.toLocaleString()}</p>`;
+                    if(sale == 10000) return `<p class="origin">${price.toLocaleString()}</p><p class='sale'>${(price - 10000).toLocaleString()}</p>`;
+                    else return `<p class="origin">${price.toLocaleString()}</p><p class='sale'>${(price - (price * sale)).toLocaleString()}</p>`;
+                }
+                const data = await fetch("./product.json").then(data => data.json());
+                // const filteredData = data.filter(data => (data.idx % 5 != 4) && (data.idx % 5 != 0));
+                const sortedData = data.toSorted((a, b) => (b.sale != null) - (a.sale != null));
+                // console.log(sortedData);
+                const html = sortedData.reduce((acc, data) => {
+                    return acc + `
+                    <li class="bx b15 oh df fc cp" style="width: 234px;">
+                        <div class="bi df as je w h g10" style="height: 200px; padding: 10px; border-end-start-radius: 25px; background-image: url('${data.img}');"><p class="f10 b btn1 bs cm bx">${data.category}</p>${data.sale != null ? '<p class="f10 b btn1 bs cm bx">SALE</p>' : ''}</div>
+                        <div class="df fc g10 jsb" style="padding: 15px;">
+                            <div><p class="b f18 s">${data.name}</p><p class="s cg f12">${data.description}</p></div>
+                            <div class="price df f14 b cm" style="gap: 6px;">${priceHTML(data.price, data.sale)}</div>
+                            <div class="df g10"><button class="btn1 bm cw1">구매하기</button><button class="btn1 bg cw1">장바구니담기</button></div>
+                        </div>
+                    </li>
+                    `;
+                }, '')
+                document.querySelector("#products").innerHTML = html;
+            }
+            render();
