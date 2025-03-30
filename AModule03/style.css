@@ -134,6 +134,29 @@ section { padding: 80px 0; }
     100% {opacity: .8; translate: 0;}
 }
 
+@keyframes updown {
+    0%, 100% {translate: 0 0;}
+    50% {translate: 0 -25px;}
+}
+
+@keyframes loading{
+    0%{
+        opacity: 1;
+        display: flex;
+    }
+    90% {
+        opacity: 1;
+    }
+    99%{
+        display: none;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+
+}
+
 #aaa { animation: ani 10s infinite; }
 #aaa:hover {animation-play-state: paused;}
 
@@ -144,7 +167,14 @@ section { padding: 80px 0; }
 .sns > i {filter: grayscale(1);}
 .sns > i:hover {filter: grayscale(0);}
 
-header .menu .drop {height: 0px; transition: .3s;}
+header .menu .drop {height: 0px; transition: .3s .3s;}
 header .menu:hover .drop, .drop:hover { height: 80px; }
 header .menu > *:hover {color: #763DF2;}
 .drop > *:hover { filter: brightness(.5); }
+
+#loading{ animation: loading 4s forwards}
+#loading > div { animation: updown 1.5s infinite;}
+#loading > div:nth-of-type(1) {animation-delay: 0;}
+#loading > div:nth-of-type(2) {animation-delay: .3s;}
+#loading > div:nth-of-type(3) {animation-delay: .6s;}
+#loading > div:nth-of-type(4) {animation-delay: .9s;}
