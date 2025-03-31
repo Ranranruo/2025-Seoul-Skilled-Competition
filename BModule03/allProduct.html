@@ -274,11 +274,58 @@
                 </ul>
             </div></section>
             <section><div class="inner df je">
-                <input type="checkbox" name="modal">
-                <label class="bm cw1 f18 btn1 b10">비회원주문</label>
-                <div class="pf z100 tl w h" style="background-color: rgba(0, 0, 0, .8);">
-                    
-                </div>
+                <input type="checkbox" name="modal" id="ismodal" hidden checked>
+                <label class="bm cw1 f18 btn1 cp b10" for="ismodal">비회원주문</label>
+                <div id="modal" class="pf z100 tl w h df jc ac" style="background-color: rgba(0, 0, 0, .8);"><div class="inner bw2 w b10 df fc g20" style="padding: 20px; height: 700px;">
+                    <div class="df w bw1 b2 b10 fc g5 bx2" style="padding: 15px;"><h1 class="f22">비회원 주문</h1><p class="f14 b cg" id="uuid">비회원 ID: 123456</p></div>
+                    <div class="df g30">
+                        <div class="bw1 bx2 b10 df fc g20 w" style="padding: 15px; width: 920px;">
+                            <h1 class="f18">전시 영역</h1>
+                            <div class="btns df g10">
+                                <button data-type="" class="active btn1 f14">전체</button>
+                                <button data-type="건강식품" class="disable btn1 f14">건강식품</button>
+                                <button data-type="디지털" class="disable btn1 f14">디지털</button>
+                                <button data-type="팬시" class="disable btn1 f14">팬시</button>
+                                <button data-type="향수" class="disable btn1 f14">향수</button>
+                                <button data-type="헤어케어" class="disable btn1 f14">헤어케어</button>
+                            </div>
+                            <ul id="productList" class="df g30 fw" style="height: 298px; overflow-y: scroll;">
+                                <li class="bx2 b15 oh df fc cp" style="width: 200px;">
+                                    <div class="bi df as je w h g10" style="height: 200px; padding: 10px; border-end-start-radius: 25px; background-image: url('./image/헤어케어/4.PNG');"><p class="f10 b btn1 bs cm bx">헤어케어</p></div>
+                                    <div class="df fc g10 jsb" style="padding: 15px;">
+                                        <div><p class="b f18 s">모로칸오일 헤어트리트먼트 100ml</p><p class="s cg f12">헤어케어, 컨디셔닝, 스타일링, 피니시까지 모두 가능한 단 하나의 헤어 오일 트리트먼트</p></div>
+                                        <div class="price df f14 b cm" style="gap: 6px;"><p class="origin">52,200</p></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bw1 bx2 b10 df fc g60 w" style="padding: 15px; width: 420px;">
+                            <h1 class="f18">주문 영역</h1>
+                            <ul id="orderList" class="df g30 fw" style="height: 298px; overflow-y: scroll;">
+                                <li class="bx2 b15 oh df fc cp" style="width: 160px;">
+                                    <div class="bi df as je w h g10" style="height: 140px; padding: 10px; border-end-start-radius: 25px; background-image: url('./image/헤어케어/4.PNG');"><p class="f10 b btn1 bs cm bx">헤어케어</p></div>
+                                    <div class="df fc g10 jsb as" style="padding: 15px;">
+                                        <div class="w"><p class="b f18 s">모로칸오일 헤어트리트먼트 100ml</p><p class="s cg f12">헤어케어, 컨디셔닝, 스타일링, 피니시까지 모두 가능한 단 하나의 헤어 오일 트리트먼트</p></div>
+                                        <div class="price df f14 b cm" style="gap: 6px;"><p class="origin">52,200</p></div>
+                                        <div class="df ac g10" style="align-self: flex-end;"><button class="bw1 b f20">-</button><p class="b f14">1</p><button class="bw1 b f20">+</button></div>
+                                    </div>
+                                </li>
+                                <li class="bx2 b15 oh df fc cp" style="width: 160px;">
+                                    <div class="bi df as je w h g10" style="height: 140px; padding: 10px; border-end-start-radius: 25px; background-image: url('./image/헤어케어/4.PNG');"><p class="f10 b btn1 bs cm bx">헤어케어</p></div>
+                                    <div class="df fc g10 jsb as" style="padding: 15px;">
+                                        <div class="w"><p class="b f18 s">모로칸오일 헤어트리트먼트 100ml</p><p class="s cg f12">헤어케어, 컨디셔닝, 스타일링, 피니시까지 모두 가능한 단 하나의 헤어 오일 트리트먼트</p></div>
+                                        <div class="price df f14 b cm" style="gap: 6px;"><p class="origin">52,200</p></div>
+                                        <div class="df ac g10" style="align-self: flex-end;"><button class="bw1 b f20">-</button><p class="b f14">1</p><button class="bw1 b f20">+</button></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bw1 bx2 b10 h df fc ae jsb" style="padding: 15px">
+                        <p class="b f20">결제 금액: \123,123</p>
+                        <div class="df g10"><label for="ismodal" class="bw3 cb bx2 hd b5 btn2 f14 hd cp">취소하기</label><button class="bm cw1 b5 btn2 f14 hd">결제하기</button></div>
+                    </div>
+                </div></div>
             </div></section>
         </main>
         <footer class="bw3" style="padding: 50px 0"><div class="inner">

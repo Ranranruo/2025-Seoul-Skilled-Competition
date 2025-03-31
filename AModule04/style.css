@@ -1,0 +1,187 @@
+/* 초기화 설정 */
+* {
+    transition: .1s;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: inherit;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+html {
+    background-color: #f9fafb;
+}
+main {
+    margin-top: 80px;
+    min-height: calc(100vh);
+}
+:root{ color: #333;}
+button, select, label input, a {
+    border: none;
+    cursor: pointer;
+}
+.w{ width: 100%;}
+.h {height: 100%;}
+.inner { max-width: 1400px; width: 100%; margin: 0 auto; padding: 0 15px;}
+.cp {cursor: pointer;}
+.fw {flex-wrap: wrap;}
+.fc {flex-direction: column;}
+.df {display: flex;}
+.js {justify-content: start;}
+.je {justify-content: end;}
+.jsb {justify-content: space-between;}
+.jse{ justify-content: space-evenly; }
+.jc{justify-content: center;}
+.as{ align-items: start;}
+.ac{ align-items: center;}
+.ae{ align-items: end;}
+
+.b {font-weight: bold;}
+.l {font-weight: lighter;}
+
+.g5{gap: 5px;}
+.g10{gap: 10px;}
+.g15{gap: 15px;}
+.g20{gap: 20px;}
+.g25{gap: 25px;}
+.g30{gap: 30px;}
+.g40{gap: 40px;}
+.g50{gap: 50px;}
+.g60{gap: 60px;}
+
+.oh {overflow: hidden;}
+.z1{z-index: 1;}
+.z2{z-index: 2;}
+.z3{z-index: 3;}
+.z4{z-index: 4;}
+.z100{z-index: 100;}
+
+section {padding: 50px 0px;}
+
+.s {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.t {font-size: 30px; color: #333; font-weight: bold;}
+.bi {background-position: center; background-size: cover; background-repeat: no-repeat;}
+
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f22{font-size: 22px;}
+.f24{font-size: 24px;}
+.f26{font-size: 26px;}
+.f28{font-size: 28px;}
+.f30{font-size: 30px;}
+.f40{font-size: 40px;}
+.f50{font-size: 50px;}
+
+.pr{position: relative;}
+.pa{position: absolute;}
+.pf{position: fixed;}
+.tl{top: 0; left: 0;}
+.tr{ top: 0; right: 0;}
+.bl{bottom: 0; left: 0;}
+.br {bottom: 0; right: 0;}
+
+.btn1 {padding: .5em 1em;}
+.btn2 {padding: 1em 2em;}
+
+.hd:hover{filter: brightness(.95);}
+.hs {transition: .2s}
+.hs:hover { scale: 1.05;}
+
+.cm { color: #763df2;} .cb {color: #333} .cs{color: #Ede9fe} .cw1 {color: #fff} .cw2{color: #f9fafb} .cw3 {color: #f5f5f5} .cg{ color: #bbb;}
+.bm { background-color: #763df2;} .bb {background-color: #333} .bs{background-color: #Ede9fe} .bw1 {background-color: #fff} .bw2{background-color: #f9fafb} .bw3 {background-color: #f5f5f5}
+
+.bx1 {box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);}
+.bx2 {box-shadow: 0 0 2px rgba(0, 0, 0, .2);}
+
+.b5{ border-radius: 5px;}
+.b10{ border-radius: 10px;}
+.b15{ border-radius: 15px;}
+.b100{ border-radius: 1000px;}
+
+.menu:hover #aaa{height: 70px;}
+.menu > *:hover {color: #763df2}
+#aaa{ height: 0; transition: height .3s .2s;}
+#aaa a:hover{filter: brightness(.5);}
+
+@keyframes slide {
+    0% {
+        translate: 0 0;
+    }
+    30% { translate: 0 0; }
+    33% { translate: -25% 0; }
+    63% { translate: -25% 0; }
+    66% { translate: -50% 0; }
+    96% { translate: -50% 0; }
+    100% { translate: -75% 0; }
+}
+
+#aab{ animation: slide 10s infinite;}
+.price:has(.sale) .origin { opacity: .5; text-decoration: line-through; }
+.price:has(.sale) .sale::before{content: '\\';}
+.price:not(:has(.sale)) .origin::before{content: '\\'}
+
+
+.sns > i {filter: brightness(.1)}
+.sns > i:hover {filter: brightness(1)}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        translate: 0 50%;
+    }
+    100% {
+        opacity: .8;
+        translate: 0 0;
+    }
+}
+/* 애니메이션 */
+.fadein1 { opacity: 0; animation: fadein 2s forwards .0s;}
+.fadein2 { opacity: 0; animation: fadein 2s forwards .5s;}
+.fadein3 { opacity: 0; animation: fadein 2s forwards 1s;}
+.fadeup1 {opacity: 0; translate: 0 50%; animation: fadeup 2s forwards 1s;}
+@keyframes updown {
+    0%,100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -15px;  
+    }
+}
+@keyframes load {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    90% {
+        opacity: 1;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+    
+}
+#loading {
+    background-color: rgba(118, 61, 242, .8);
+    z-index: 100;
+    animation: load 4s forwards;
+}
+#loading > div:nth-of-type(1) { animation: updown 1.5s infinite .0s;}
+#loading > div:nth-of-type(2) { animation: updown 1.5s infinite .2s;}
+#loading > div:nth-of-type(3) { animation: updown 1.5s infinite .4s;}
+#loading > div:nth-of-type(4) { animation: updown 1.5s infinite .6s;}

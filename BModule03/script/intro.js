@@ -1,3 +1,4 @@
+// 모토
 const $moto = document.querySelector(".moto");
 const $motoText = document.querySelector("#moto-text");
 const $$moto = document.querySelectorAll(".moto > div");

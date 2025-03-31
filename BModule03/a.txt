@@ -20,12 +20,7 @@ const render = async () => {
 
 
              const render = async () => {
-                const priceHTML = (price, sale) => {
-                    if(typeof price == 'string') price = parseInt(price.replaceAll(",", ""));
-                    if(sale == null) return `<p class="origin">${price.toLocaleString()}</p>`;
-                    if(sale == 10000) return `<p class="origin">${price.toLocaleString()}</p><p class='sale'>${(price - 10000).toLocaleString()}</p>`;
-                    else return `<p class="origin">${price.toLocaleString()}</p><p class='sale'>${(price - (price * sale)).toLocaleString()}</p>`;
-                }
+                
                 const data = await fetch("./product.json").then(data => data.json());
                 // const filteredData = data.filter(data => (data.idx % 5 != 4) && (data.idx % 5 != 0));
                 const sortedData = data.toSorted((a, b) => (b.sale != null) - (a.sale != null));
