@@ -109,7 +109,7 @@ section { padding: 80px 0; }
 .hd:hover{filter: brightness(.9);}
 .hc:hover{scale: 1.05;}
 
-.cm {color: #763DF2}  .cb {color:#333} .cg{color: #bbb;} .cs {color: #EDE9FE} 
+.cm {color: #763DF2}  .cb {color:#333} .cg{color: #bbb;} .cs {color: #EDE9FE}
 .cw1{color: #fff;} .cw2{ color: #F9FAFB} .cw3{ color: #F5F5F5;}
 .bm {background-color: #763DF2} .bw1{background-color: #fff;} .bw2{ background-color: #F9FAFB} .bw3{ background-color: #F5F5F5;} .bb {background-color:#333} .bg{background-color: #bbb;}.bs {background-color: #EDE9FE}
 

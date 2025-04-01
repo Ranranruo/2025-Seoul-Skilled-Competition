@@ -22,6 +22,7 @@ const state = {
     buyList: [],
     totalPrice: 0
 }
+
 const $productList = document.querySelector("#productList");
 const $orderList = document.querySelector("#orderList");
 const $$categoryBtn = document.querySelectorAll(".btns button");
@@ -118,5 +119,3 @@ $$categoryBtn.forEach(btn => btn.addEventListener("click", (e) => {
     })
     render();
 }));
-
-render();

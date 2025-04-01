@@ -1,0 +1,167 @@
+/* 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+:root {color: #333;}
+#app {background-color: #f9fafb;}
+main {min-height: 100vh}
+.w {width: 100%;}
+.h {
+    height: 100%;
+}
+
+.cp {cursor: pointer;}
+button, a, label, select {cursor: pointer;}
+.cm {color: #763dfe} .cs {color: #ede9fe} 
+.cw1{ color: #fff;} .cw2{ color: #f9fafb;} .cw3{ color: #f5f5f5;}
+.cb{ color: #333;} .cg {color:#bbb}
+
+.bm {background-color: #763dfe} .bs {background-color: #ede9fe} 
+.bw1{ background-color: #fff;} .bw2{ background-color: #f9fafb;} .bw3{ background-color: #f5f5f5;}
+.bb{ background-color: #333;} .bg {background-color:#bbb}
+
+.df { display: flex;} .fc { flex-direction: column;}
+.jc{ justify-content: center;} .js {justify-content: start;} .je {justify-content: end;} .jsb {justify-content: space-between;}
+.as{ align-items: start;} .ac {align-items: center;} .ae{ align-items: end;}
+
+.inner { max-width: 1400px; margin: 0 auto; padding: 0 15px;}
+
+section {
+    padding: 50px 0;
+}
+.t {font-size: 40px; font-family: 'impact'; font-weight: 400;}
+
+.g5 {gap: 5px;}
+.g10 {gap: 10px;}
+.g15 {gap: 15px;}
+.g20 {gap: 20px;}
+.g30 {gap: 30px;}
+.g40 {gap: 40px;}
+.g50 {gap: 50px;}
+.g60 {gap: 60px;}
+.g70 {gap: 70px;}
+
+.f12 { font-size: 12px;}
+.f14 { font-size: 14px;}
+.f16 { font-size: 16px;}
+.f18 { font-size: 18px;}
+.f20 { font-size: 20px;}
+.f22 { font-size: 22px;}
+.f24 { font-size: 24px;}
+.f30 { font-size: 30px;}
+.f40 { font-size: 40px;}
+.f50 { font-size: 50px;}
+.f60 { font-size: 60px;}              
+.b {font-weight: bold;}
+.l { font-weight: lighter;}
+
+.pf {position: fixed;}
+.pr {position: relative}
+.pa {position: absolute;}
+
+.tl {top: 0; left: 0;}
+.tr { top: 0; right: 0;}
+.bl {bottom: 0; left: 0;}
+.br { bottom: 0; right: 0;}
+
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
+.z3 {z-index: 3;}
+.z4 {z-index: 4;}
+.z100 {z-index: 100;}
+
+.s {overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+
+.oh {overflow: hidden;}
+
+.hd:hover{filter: brightness(.9);}
+.hs{transition: .2s;}
+.hs:hover{ scale: 1.05;}
+
+.bx1 {box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);}
+.bx2 {box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);}
+
+.b5{ border-radius: 5px;}
+.b10{ border-radius: 10px;}
+.b15{ border-radius: 15px;}
+.b20{ border-radius: 20px;}
+.b100{ border-radius: 100%;}
+.fw {flex-wrap: wrap;}
+.btn1 {padding: .5em 1em;}
+.btn2 {padding: 1em 2em;}
+
+.bi {background-size: cover; background-repeat: no-repeat; background-position: center;}
+
+.drop {height: 0px; overflow: hidden; transition: .2s height .1s; ;}
+.menu:hover .drop{height: 70px;}
+.menu > *:hover {color: #763dfe;}
+.drop a:hover {filter: brightness(.3);}
+
+@keyframes slide {
+    0% { translate: 0 0;}
+    30% { translate: 0 0;}
+    33% { translate: -25% 0;}
+    63% { translate: -25% 0;}
+    66% { translate: -50% 0;}
+    96% { translate: -50% 0;}
+    100% { translate: -75% 0;}
+}
+
+.slide { animation: slide 10s infinite;}
+.slide:hover {animation-play-state: paused;}
+
+.product:has(.sale) .sale::before{content: '\\';}
+.product:not(:has(.sale)) .origin::before{ content: '\\';}
+.product:has(.sale) .origin { opacity: .5; text-decoration: line-through;}
+.sns > i{filter:brightness(.1);}
+.sns > i:hover {filter: brightness(1);}
+
+@keyframes updown {
+    0%, 100% { translate: 0 0px;}
+    50% { translate: 0 -20px;}
+}
+
+@keyframes loading {
+    0% {
+        opacity: .9;
+        display: flex;
+    }
+    90% {
+        opacity: .9;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+#loading { opacity: .9; animation: loading 4s forwards;}
+
+#loading > *:nth-of-type(1) { translate: 0; animation: updown 1.5s infinite 0s;}
+#loading > *:nth-of-type(2) { translate: 0; animation: updown 1.5s infinite .3s;}
+#loading > *:nth-of-type(3) { translate: 0; animation: updown 1.5s infinite .6s;}
+#loading > *:nth-of-type(4) { translate: 0; animation: updown 1.5s infinite .9s;}
+
+@keyframes fadein {
+    0%{ opacity: 0;}
+    100% {opacity: 100%;}
+}
+
+@keyframes fadeup {
+    0% { opacity: 0; translate: 0 50%;}
+    100% { opacity: .8; translate: 0 0;}
+}
+
+.fadeup3 {opacity: 0; translate: 0 0; translate: 0 50%; animation: fadeup 2s forwards 1s;}
+.fadein1 {opacity: 0; animation: fadein 2s forwards 0s;}
+.fadein2 {opacity: 0; animation: fadein 2s forwards .5s;}
+.fadein3 {opacity: 0; animation: fadein 2s forwards 1s;}
+

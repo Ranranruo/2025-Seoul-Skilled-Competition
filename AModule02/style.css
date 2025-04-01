@@ -222,3 +222,5 @@ textarea { padding: 50px; }
     font-weight: 100;
 }
 
+
+.drop {height: 0px; overflow: hidden;}
