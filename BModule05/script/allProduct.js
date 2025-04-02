@@ -45,7 +45,7 @@ const order = () => {
             if(!state.buyList.includes(data.idx)) return acc;
             let price = data.price;
             if(typeof price == "string") price = parseInt(price.replaceAll(",", ""));
-            return acc + (price * state.buyList.filter(idx => idx == data.idx).length);
+            return acc + (getSale(price, data.sale) * state.buyList.filter(idx => idx == data.idx).length);
         }, 0)
         state.totalPrice = totalPrice;
         $totalPrice.innerHTML = "\\" + totalPrice.toLocaleString();
@@ -100,9 +100,15 @@ const order = () => {
             </li>`;
         }
     const getPrice =(price, sale) => {
-            if(typeof price == "string") price = parseInt(price.replaceAll(",", ""));
-            if(sale == null) return `<div class="df g5 b  cm"><p class="origin">${price.toLocaleString()}</p></div>`;
-            else return `<div class="df g5 b  cm"><p class="origin">${price.toLocaleString()}</p><p class="sale">${(sale == 10000 ? price - 10000 : price - (price - price * sale)).toLocaleString()}</p></div>`;
+        const p = getSale(price).toLocaleString();
+        const s = getSale(price, sale).toLocaleString();
+        if(sale == null) return `<div class="df g5 b  cm"><p class="origin">${p}</p></div>`;
+        else return `<div class="df g5 b  cm"><p class="origin">${p}</p><p class="sale">${s}</p></div>`;
+    }
+    const getSale = (price, sale = null) => {
+        if(typeof price == "string") price = parseInt(price.replaceAll(",", ""));
+        if(sale == null) return price
+        return (sale == null ? price : (sale == 10000 ? price - 10000 : price - (price * sale)));
     }
     const checkInOrder = (event) => {
         const p = $buyList.getBoundingClientRect();

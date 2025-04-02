@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 앱 -->
+    <div id="app">
+        <!-- 헤더 -->
+        <?php require_once "./header.php"; ?>
+        <!-- 메인 -->
+        <main style="margin-top: 80px;">
+            <section><div class="inner df jsb g40">
+                <div class="w df fc g40">
+                    <div class="btn2 bw1 bx2 b f20 b10">장바구니</div>
+                    <ul class="bx2 bw1">
+                        <li class="product df jsb" style="padding: 20px">
+                            <div class="df g20 ac g10">
+                                <div class="bi b10" style="aspect-ratio: 1/1; width: 150px; background-image: url('./images/건강식품/1.PNG');"></div>
+                                <div class="df fc g10">
+                                    <p class="s b f22" style="width: 300px;">이뮨 멀티비타민&미네랄</p>
+                                    <p class="s cg b" style="width: 400px;">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p>
+                                    <div class="df g5 b cm"><p class="origin">1,254,000</p><p class="sale">125,400</p></div>
+                                    <div class="df g5 f18 b cb">총 가격: \132,123</div>
+                                </div>
+                            </div>
+                            <div class="df ac" style="margin-right: 20px;">
+                                <div class="df ac bx2 b10"><a href="#" class="bx2 df jc ac f30 b" style="width: 40px; aspect-ratio: 1/1;">-</a><p class="bx2 df jc ac b" style="width: 40px; aspect-ratio: 1/1;">1</p><a href="#" class="bx2 df jc ac f30 b" style="width: 40px; aspect-ratio: 1/1;">+</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn2 bw1 bx2 b10 df fc g50" style="width: 500px;">
+                    <div class="b f20">결제</div>
+                    <div class="df fc g50">
+                        <div class="df fc g10">
+                            <div class="df jsb b">
+                                <p>총 금액:</p><p>\12,132,551</p>
+                            </div>
+                            <div class="df jsb g10"><input type="text" class="btn1 f16 bx2 b10" placeholder="쿠폰 코드"><button class="bm cw1 b5 f16 hd btn1">적용</button></div>
+                        </div>
+                        <div class="df fc ae g10">
+                            <div class="df f w jsb cg b"><p>쿠폰 적용전 금액:</p><p>12,132,551</p></div>
+                            <p class="f30 b">\9,125,341</p>
+                            <button class="w hd btn1 b bm cw1 b5 f20">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div></section>
+        </main>
+            <footer class="bw3" style="padding: 50px 0;"><div class="inner">
+                <ul class="df jsb">
+                    <li class="df fc g30">
+                        <h1 class="f22">고객센터 이용안내</h1>
+                        <div class="df fc g10 b f14">
+                            <p class=" df g5"><i class="fa fa-phone cm" style="font-size: 18px;"></i>- 온라인몰 고객센터 1580-8282</p>
+                            <p class=" df g5"><i class="fa fa-home cm" style="font-size: 18px;"></i>- 매장고객센터 1577-8254</p>
+                            <p class="">고객센터 운영시간 [평일 09:00 - 18:00]</p>
+                            <p>주말 및 공휴일은 1:1문의하기를 이용해주세요.<br>업무가 시작되면 바로 처리해드립니다.</p>
+                        </div>
+                    </li>
+                    <li class="df fc g30">
+                        <h1 class="f22">바로가기</h1>
+                        <div class="df fc g10 b f14">
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">이용약관.법적고지</a>
+                            <a href="#">청소년보호방침</a>
+                            <a href="#">이메일무단수집거부</a>
+                            <a href="#">사이트맵</a>
+                            <a href="#">채용</a>
+                        </div>
+                    </li>
+                    <li class="df fc g30">
+                        <h1 class="f22">정보</h1>
+                        <div class="df fc g10 b f14">
+                            <p>(주)GIFTS:Mall</p>
+                            <p>사업자등록번호 : 809-81-01157</p>
+                            <p>대표이사 황기영</p>
+                            <p>주소 : 서울특별시 용산구 한강대로 123, 40층</p>
+                            <p>본사 대표전화 : 02-123-4567</p>
+                            <p>GIFTS:Mall 가맹상담전화 : 02-123-4568</p>
+                        </div>
+                    </li>
+                    <li class="df fc g30">
+                        <h1 class="f22">지방은행구매안전서비스</h1>
+                        <div class="df fc g10 b f14">
+                            <p style="line-height: 25px;">GIFTS:Mall은 현금 결제한 금액에<br>대해 지방은행과 채무지급보증 계약을<br> 체결하여 안전한 거래를 보장하고 있습니다</p>
+                            <a href="#" class="cm f20">서비스 가입사실 확인 ></a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sns df jc ac g20" style="padding: 50px 0;">
+                    <i style="font-size: 30px; color: blue;" class="fa fa-facebook-square"></i>
+                    <i style="font-size: 30px; color: orange;" class="fa fa-git-square"></i>
+                    <i style="font-size: 30px; color: red;" class="fa fa-pinterest-square"></i>
+                    <i style="font-size: 30px; color: orange;" class="fa fa-reddit-square"></i>
+                    <i style="font-size: 30px; color: blue;" class="fa fa-linkedin-square"></i>
+                </div>
+                <div class="df b jc ac" style="border-top: 1px solid rgba(0, 0, 0, .1); padding-top: 50px;">COPYRIGHTⓒ 2024 GIFTS:MALL KOREA INC. ALL RIGHTS RESERVED</div>
+            </div></footer>
+    </div>
+    <!-- <div id="loading" class="g20 df jc ac w h pf tl bm z100" style="width: 100vw; height: 100vh;">
+        <div class="bw1 b100" style="width: 30px; aspect-ratio: 1/1;"></div>
+        <div class="bw1 b100" style="width: 30px; aspect-ratio: 1/1;"></div>
+        <div class="bw1 b100" style="width: 30px; aspect-ratio: 1/1;"></div>
+        <div class="bw1 b100" style="width: 30px; aspect-ratio: 1/1;"></div>
+    </div> -->
+</body>
+</html>
