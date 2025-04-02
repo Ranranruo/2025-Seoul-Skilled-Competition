@@ -33,6 +33,25 @@
         </div></header>
         <!-- 메인 -->
         <main style="margin-top: 80px;">
+            <section><div class="inner df fc g50">
+                <h1 class="t df jc ac">AD</h1>
+                <div class="pr" id="ad">
+                    <video class="bx2 b10 w" src="./images/AD.mp4"></video>
+                    <div class="pa df fc tr g10" style="padding: 10px;">
+                        <button data-event="play" class="bw3 b5 bx2 btn1 f16 hd">재생</button>
+                        <button data-event="pause" class="bw3 b5 bx2 btn1 f16 hd">일시정지</button>
+                        <button data-event="stop" class="bw3 b5 bx2 btn1 f16 hd">정지</button>
+                        <button data-event="back" class="bw3 b5 bx2 btn1 f16 hd">되감기(10초씩)</button>
+                        <button data-event="go" class="bw3 b5 bx2 btn1 f16 hd">빨리감기(10초씩)</button>
+                        <button data-event="slow" class="bw3 b5 bx2 btn1 f16 hd">감속하기(0.1배씩)</button>
+                        <button data-event="fast" class="bw3 b5 bx2 btn1 f16 hd">배속하기(0.1배씩)</button>
+                        <button data-event="clear" class="bw3 b5 bx2 btn1 f16 hd">배속 원래대로 돌리기</button>
+                        <button data-event="control" class="bw3 b5 bx2 btn1 f16 hd">컨트롤러 보이기/숨기기</button>
+                        <button data-event="repeat" class="bw3 b5 bx2 btn1 f16 hd">반복 켜기/끄기</button>
+                        <button data-event="auto" class="bw3 b5 bx2 btn1 f16 hd">자동재생 켜기/끄기</button>
+                    </div>
+                </div>
+            </div></section>
             <section><div class="inner df fc g60">
                 <div class="df jsb ae"><p class="t">All Products</p><a href="#" class="cm b f14">View More ></a></div>
                 <ul class="df fw g30" id="productList"><li style="width: 250px;" class="oh b10 bx2 product">
@@ -362,6 +381,36 @@
                     </div>
                 </li></ul>
             </div></section>
+            <section><div class="inner df je">
+                <input type="checkbox" id="ismodal" hidden>
+                <label for="ismodal" class="btn1 f16 bm cw1 b5">비회원주문</label>
+                <div id="modal" class="pf tl w h z100 df jc ac" style="width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, .8);"><div class="inner bw1 w b10 bx1 df fc jsb g40" style="padding: 30px; aspect-ratio: 16/9;">
+                    <div class="bw2 bx2 b10 df ac g10" style="padding: 20px;"><div class="b f20">비회원 주문</div><p class="uuid cg b f16">비회원 ID: 123542</p></div>
+                    <div class="df w b df g40">
+                        <div class="df bw2 bx2 b10 fc g20" style="width: 900px; padding: 20px;">
+                            <p class="f20 b">전시 영역</p>
+                            <div class="categoryBtn">
+                                <button class="btn1 b5" data-type="">전체</button>
+                                <button class="btn1 b5" data-type="건강식품">건강식품</button>
+                                <button class="btn1 b5" data-type="디지털">디지털</button>
+                                <button class="btn1 b5" data-type="팬시">팬시</button>
+                                <button class="btn1 b5" data-type="향수">향수</button>
+                                <button class="btn1 b5" data-type="헤어케어">헤어케어</button>
+                            </div>
+                            <ul id="orderList" class="as w h df g20 fw" style="overflow-y: scroll; height: 400px;">
+
+                            </ul>
+                        </div>
+                        <div class="df fc bw2 bx2 b10 g50" style="width: 500px; padding: 20px;">
+                            <p class="f20 b">주문 영역</p>
+                            <ul id="buyList" class="w h df g20 fw as" style="overflow-y: scroll; height: 400px;">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bw2 bx2 df fc ae b10 g10" style="padding: 20px;"><p id="totalPrice" class=" b f20">Total: \12,123,345</p><label for="ismodal" id="submit" class="btn1 hd bm cw1 b5 f16">주문하기</label></div>
+                </div></div>
+            </div></section>
         </main>
             <footer class="bw3" style="padding: 50px 0;"><div class="inner">
                 <ul class="df jsb">
@@ -421,5 +470,8 @@
         <div class="bw1 b100" style="width: 30px; aspect-ratio: 1/1;"></div>
         <div class="bw1 b100" style="width: 30px; aspect-ratio: 1/1;"></div>
     </div> -->
+    <div id="" class="alert pf z100 bm cw1 btn1 b5 b f20 dn" style="top: 50%; left: 50%; translate: -50%;">
+    </div>
+    <script src="./script/allProduct.js"></script>
 </body>
 </html>
