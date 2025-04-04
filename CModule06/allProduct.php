@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <?php require_once "./header.php" ?>
+    <!-- 메인 영역 -->
+    <main>
+        <section><div class="inner df fc ac g50" style="margin-top: 80px;">
+            <h1 class="t">AD</h1>
+            <div class="pr">
+                <video src="./images/AD.mp4" muted class="w b10 bx2" style="aspect-ratio: 16/9;"></video>
+                <div class="ad-btns df fc g10 pa tr" style="padding: 10px;">
+                    <button class="btn1 b5" data-event="play">재생</button>
+                    <button class="btn1 b5" data-event="pause">일시정지</button>
+                    <button class="btn1 b5" data-event="stop">정지</button>
+                    <button class="btn1 b5" data-event="back">되감기(10초씩)</button>
+                    <button class="btn1 b5" data-event="go">빨리감기(10초씩)</button>
+                    <button class="btn1 b5" data-event="slow">감속하기(0.1배씩)</button>
+                    <button class="btn1 b5" data-event="fast">배속하기(0.1배씩)</button>
+                    <button class="btn1 b5" data-event="clear">배속 원래대로 돌리기</button>
+                    <button class="btn1 b5" data-event="control">컨트롤러 보이기/숨기기</button>
+                    <button class="btn1 b5" data-event="repeat">반복 켜기/끄기</button>
+                    <button class="btn1 b5" data-event="auto">자동재생 켜기/끄기</button>
+                </div>
+            </div>
+        </div></section>
+        <section><div class="inner df fc g60">
+            <div class="df jsb ae"><h1 class="t">All Products</h1><a href="#" class="cm b">View More &gt;</a></div>
+            <ul class="w df g30">
+                <li class="df fc g10">
+                    <p class="cg">건강식품</p>
+                    <div class="df fc g30 products" data-type="건강식품">
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/건강식품/1.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">건강식품</div>
+                <div class="f10 bs cm b5 btn1 bx2">SALE</div>
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">이뮨 멀티비타민&amp;미네랄</p><p class="s cg f14">국내 판매 1위 멀티비타민 이뮨 14일분에 이중제형 + 남/녀 맞춤설계 포뮬러를 적용한 신제품</p></div>
+                    <div class="price df g5 b cm"><div class="origin">75,000</div><div class="sale">65,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/건강식품/2.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">건강식품</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">센트룸</p><p class="s cg f14">생기 넘치는 일상을 위한 센트룸 우먼 더블업. 비타민 B군 8종 함량 2배, 23가지 비타민과 미네랄, 한국인 여성 맞춤 영양 설계</p></div>
+                    <div class="price df g5 b cm"><div class="origin">27,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/건강식품/3.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">건강식품</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">닥터브라이언</p><p class="s cg f14">달콤한 청포도맛 구미로 맛있게 비타민 C와 D를 충전하세요. 활기찬 하루와 튼튼한 뼈 건강을 맛있게 충전하는 부드러운 젤리 타입</p></div>
+                    <div class="price df g5 b cm"><div class="origin">2,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/건강식품/4.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">건강식품</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">액티브 멀티포맨</p><p class="s cg f14">미국판매 1위 내셔널 건강기능식품 브랜드. 남성 건강을 생각하는 22가지 주요 비타민&amp;미네랄</p></div>
+                    <div class="price df g5 b cm"><div class="origin">30,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/건강식품/5.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">건강식품</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">네이처메이드B12</p><p class="s cg f14">여성 건강을 생각하는 23가지 주요 비타민&amp;미네랄, 한국인 1일 영양 권장량을 고려한 철분, 엽산이 강화된 여성종합비타민</p></div>
+                    <div class="price df g5 b cm"><div class="origin">30,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            </div>
+                </li>
+                <li class="df fc g10">
+                    <p class="cg">디지털</p>
+                    <div class="df fc g30 products" data-type="디지털">
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/디지털/4.jpg'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">디지털</div>
+                <div class="f10 bs cm b5 btn1 bx2">SALE</div>
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">파이널마우스 스타라이트12 페가수스 미디엄</p><p class="s cg f14">최첨단 펌웨어를 갖춘 업계 최고의 노르딕 RF 플랫폼 기반의 무선 기술 채용, 최대 20,000CPI 해상도를 갖춘 e스포츠 센서 채용</p></div>
+                    <div class="price df g5 b cm"><div class="origin">1,254,000</div><div class="sale">1,128,600</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/디지털/1.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">디지털</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">PANTONE PD충전 보조배터리</p><p class="s cg f14">230g의 가벼운 무게로 휴대성 극대화, 3way 빌트인 케이블 채용, 10,000mAh의 대용량 배터리팩 내장</p></div>
+                    <div class="price df g5 b cm"><div class="origin">24,400</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/디지털/2.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">디지털</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">Bowie D05 무선 블루투스 5.3 헤드셋</p><p class="s cg f14">현실같은 3D사운드 스테이지 제공, 70시간의 오디오 재생시간, 2시간으로 완전 충전</p></div>
+                    <div class="price df g5 b cm"><div class="origin">36,900</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/디지털/3.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">디지털</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">독거미 F99 기계식 키보드</p><p class="s cg f14">최고의 퍼포먼스를 경험하게 해주는 키보드, 안정적인 무선 전송, 저소음 디자인, 일체형 실리콘 패드 디자인으로 소음 최소화, 프리미엄 PCB기판 채용으로 안정적이고 편안한 타건감 제공</p></div>
+                    <div class="price df g5 b cm"><div class="origin">70,750</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/디지털/5.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">디지털</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">보이저5200 블루투스 이어폰</p><p class="s cg f14">4개의 마이크 탑재, 6중 바람차단, 강력한 노이즈 캔슬링, 공간의 소음을 최대로 줄여 최적의 업무 환경을 경험할 수 있습니다.</p></div>
+                    <div class="price df g5 b cm"><div class="origin">146,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            </div>
+                </li>
+                <li class="df fc g10">
+                    <p class="cg">팬시</p>
+                    <div class="df fc g30 products" data-type="팬시">
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/팬시/4.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">팬시</div>
+                <div class="f10 bs cm b5 btn1 bx2">SALE</div>
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">게이밍 이어폰 VJJB NI</p><p class="s cg f14">세계 1위 가성비 유선 이어폰. 듀얼 드라이버 기술로 완벽한 고품질 사운드와 교체가 가능한 분리형 커스텀 케이블</p></div>
+                    <div class="price df g5 b cm"><div class="origin">38,900</div><div class="sale">28,900</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/팬시/1.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">팬시</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">명품 자동 장우산</p><p class="s cg f14">태풍에도 견디는 프리미엄 우드 장우산. 50개 이상 구매 시 손잡이 무료 각인 서비스 제공</p></div>
+                    <div class="price df g5 b cm"><div class="origin">31,600</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/팬시/2.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">팬시</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">14K 윙블링 원터치 링 귀걸이(주문제작)</p><p class="s cg f14">언제나 당신의 일상에 '편안한 멋' 평범한 순간마저 매력을 돋보이게 만들어 줄 14K Daily Collection. 본 상품은 주문 제작으로 배송은 약 7~10일 정도 소요됩니다(주말 및 공휴일 제외).</p></div>
+                    <div class="price df g5 b cm"><div class="origin">250,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/팬시/3.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">팬시</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">14K 윙블링 메르시 목걸이(주문제작)</p><p class="s cg f14">언제나 변함없고 고급스러운 전체 14K 골드로 제작되어 소장 가치뿐만 아니라 우아한 아름다움을 선사합니다. 본 상품은 주문 제작으로 배송은 약 7~10일 정도 소요됩니다(주말 및 공휴일 제외).</p></div>
+                    <div class="price df g5 b cm"><div class="origin">265,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/팬시/5.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">팬시</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">인스탁스 미니 에보</p><p class="s cg f14">당신이 보는 세상을 보여주세요. 가장 혁신적인 프리미엄 클래식 하이브리드 카메라, 묵직한 세련됨이 돋보이는 mini Evo의 클래식 디자인을 만나보세요.</p></div>
+                    <div class="price df g5 b cm"><div class="origin">320,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            </div>
+                </li>
+                <li class="df fc g10">
+                    <p class="cg">향수</p>
+                    <div class="df fc g30 products" data-type="향수">
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/향수/4.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">향수</div>
+                <div class="f10 bs cm b5 btn1 bx2">SALE</div>
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">몽블랑 익스플로러 EDP 60ml</p><p class="s cg f14">전 세계를 여행하는 탐험가의 향기. 에너제틱 베르가못에서 자연스러운 패출리로 이어지는 향의 여정(우디 레더리 아로마틱)</p></div>
+                    <div class="price df g5 b cm"><div class="origin">103,000</div><div class="sale">93,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/향수/1.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">향수</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">에스쁘아 솔리드 퍼퓸 4.2g</p><p class="s cg f14">새벽 달빛 아래 달큰한 체리가 어지럽게 흩어진 자리, 새하얀 자스민이 코끝을 스치고 자유롭게 남는 풍부한 머스크 향의 고체 향수</p></div>
+                    <div class="price df g5 b cm"><div class="origin">26,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/향수/2.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">향수</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">호텔도슨 향수 오드퍼퓸 75ml</p><p class="s cg f14">향긋하고 보드라운 마른 꽃과 나무 향 뒤로 낙엽이 타는 듯한 베티버 향이 퍼지는 스파이시 플로럴 향</p></div>
+                    <div class="price df g5 b cm"><div class="origin">153,000</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/향수/3.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">향수</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">랑방 레 플레르 EDT 90ml</p><p class="s cg f14">에너지 넘치고 빛나는 머스키 프루티 플로럴 향으로 부드러움과 반짝임의 완벽한 균형이 매력입니다.</p></div>
+                    <div class="price df g5 b cm"><div class="origin">64,500</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/향수/5.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">향수</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">캘빈클라인 One EDT 50ml</p><p class="s cg f14">남녀 모두에게 어울리는 현대적이며, 라이트한 향의 캘빈클라인 CK one 오 드 뚜왈렛. 상쾌하고 신선한 시트러스 계열의 향으로 편안하고 캐주얼한 향수</p></div>
+                    <div class="price df g5 b cm"><div class="origin">58,900</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            </div>
+                </li>
+                <li class="df fc g10">
+                    <p class="cg">헤어케어</p>
+                    <div class="df fc g30 products" data-type="헤어케어">
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/헤어케어/5.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">헤어케어</div>
+                <div class="f10 bs cm b5 btn1 bx2">SALE</div>
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">닥터포헤어 피토프레시 헤어쿨링 스프레이 150ml</p><p class="s cg f14">열받아 예민해진 두피를 위한 즉각적인 두피 쿨링 솔루션. 온종일 느껴지는 상쾌함, 피토프레이 쿨링 스프레이</p></div>
+                    <div class="price df g5 b cm"><div class="origin">16,000</div><div class="sale">14,400</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/헤어케어/1.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">헤어케어</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">어노브 딥 데미지 트리트먼트 EX 더블</p><p class="s cg f14">부드러움에 집착하다! 어노브 집착 헤어팩! 단백질 3,000% UP으로 완성하는 극손상모 솔루션</p></div>
+                    <div class="price df g5 b cm"><div class="origin">29,800</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/헤어케어/2.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">헤어케어</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">려 루트젠 여성맞춤 볼륨 탈모증상케어 샴퓨 353ml</p><p class="s cg f14">근거있는 여성탈모 전문가 려 루트젠이 만든 촘촘탄탄 밀도탄력을 채우는 3D볼륨 탈모 샴푸. 부드럽고 향 좋은 약산성 비건 샴푸</p></div>
+                    <div class="price df g5 b cm"><div class="origin">21,900</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/헤어케어/3.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">헤어케어</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">라보에이치 두피쿨링&amp;노세범 샴푸 333ml</p><p class="s cg f14">청량하게 리프레쉬-쿨링샴푸, 오래도록 뽀송뽀송-노세범샴푸, 두피장벽강화 특허기술-탈모증상 완화 기능성 샴푸</p></div>
+                    <div class="price df g5 b cm"><div class="origin">19,800</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            
+            <div class="bx2 b10 oh" style="width: 250px;">
+                <div class="bi df as je g10" style="background-image: url('./images/헤어케어/4.PNG'); aspect-ratio: 1/.7; border-end-start-radius: 70px; padding: 10px;">
+                <div class="f10 bs cm b5 btn1 bx2">헤어케어</div>
+                
+                </div>
+                <div class="df fc g10" style="padding: 15px;">
+                    <div class="w df fc"><p class="s b f18">모로칸오일 헤어트리트먼트 100ml</p><p class="s cg f14">헤어케어, 컨디셔닝, 스타일링, 피니시까지 모두 가능한 단 하나의 헤어 오일 트리트먼트</p></div>
+                    <div class="price df g5 b cm"><div class="origin">52,200</div></div>
+                    <div class="df jsb"><button class="hd bm cw1 btn1 b5 f14">구매하기</button><button class="hd cb bw3 btn1 b5 f14">장바구니담기</button></div>
+                </div>
+            </div>
+            </div>
+                </li>
+            </ul>
+        </div></section>
+        <section><div class="inner df je">
+            <input type="checkbox" id="ismodal" hidden>
+            <label class="btn1 bm cw1 b5 hd" for="ismodal">비회원주문</label>
+            <div id="modal" class="df jc ac z100 pf w h tl" style="background-color: rgba(0, 0, 0, .8);" >
+                <div class="df fc jsb bw2 inner w b10 bx1 g30" style="height: 787.5px; padding: 20px;">
+                    <div class="b10 df g15 bw1 bx2 ac" style="padding: 20px;"><p class="b f20">비화원주문</p><p class="cg b uuid">비회원 ID:123123</p></div>
+                    <div class="w h g40 df jsb">
+                        <div class="b10 w h bw1 bx2 df fc g10" style="padding: 20px;">
+                            <p class="b f20">전시 영역</p>
+                            <div class="modal-btns df g10">
+                                <button data-type="" class="bs cm btn1 bx2 b5">전체</button>
+                                <button data-type="건강식품" class="bs cm btn1 bx2 b5">건강식품</button>
+                                <button data-type="디지털" class="bs cm btn1 bx2 b5">디지털</button>
+                                <button data-type="팬시" class="bs cm btn1 bx2 b5">팬시</button>
+                                <button data-type="향수" class="bs cm btn1 bx2 b5">향수</button>
+                                <button data-type="헤어케어" class="bs cm btn1 bx2 b5">헤어케어</button>
+                            </div>
+                            <ul class="modal-productList df fw g20" style="height: 350px; overflow-y: scroll;">
+
+                            </ul>
+                        </div>
+                        <div class="b10 w h bw1 bx2 df fc g60" id="orderArea" style="padding: 20px;">
+                            <p class="b f20">주문 영역</p>
+                            <ul class="modal-orderList df fw g20" style="height: 350px; overflow-y: scroll;">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="b10 df fc ae g10 bw1 bx2" style="padding: 20px;">
+                        <p id="modal-total" class="f30 b">\12,319,238</p>
+                        <label for="ismodal" class="btn1 bm cw1 b5 f18" id="submit">주문하기</label>
+                    </div>
+                </div>
+            </div>
+        </div></section>
+    </main>
+    <!-- 푸터 영역 -->
+    <footer class="bw3" style="padding: 50px 0;"><div class="inner df fc g30">
+            <a href="#" class="cm b t f30" style="font-weight: 400;"><i class="fa fa-dropbox"></i>GIFT:Mall</a>
+            <div class="df fc g30">
+                <ul class="df jsb">
+                    <li class="df fc g20">
+                        <p class="b f20">고객센터 이용안내</p>
+                        <div class="df fc g5">
+                            <div class="df ac g5"><i class="fa fa-phone cm"></i><p class="b">- 온라인몰 고객센터 1580-8282</p></div>
+                            <div class="df ac g5"><i class="fa fa-home cm"></i><p class="b">- 매장고객센터 1577-8254</p></div>
+                            <p class="f14">고객센터 운영시간 [평일 09:00 - 18:00]</p>
+                            <p class="f14">주말 및 공휴일은 1:1문의하기를 이용해주세요.<br>업무가 시작되면 바로 처리해드립니다.</p>
+                        </div>
+                    </li> 
+                    <li class="df fc g20">
+                        <p class="b f20">바로가기</p>
+                        <div class="df fc g5">
+                            <a class="f16">개인정보처리방침</a>
+                            <a class="f16">이용약관.법적고지</a>
+                            <a class="f16">청소년보호방침</a>
+                            <a class="f16">이메일무단수집거부</a>
+                            <a class="f16">사이트맵</a>
+                            <a class="f16">채용</a>
+                        </div>
+                    </li>
+                    <li class="df fc g20">
+                        <p class="b f20">정보</p>
+                        <div class="df fc g5">
+                            <p class="f14">(주)GIFTS:Mall</p>
+                            <p class="f14">사업자등록번호 : 809-81-01157</p>
+                            <p class="f14">대표이사 황기영</p>
+                            <p class="f14">주소 : 서울특별시 용산구 한강대로 123, 40층 </p>
+                            <p class="f14">본사 대표전화 : 02-123-4567</p>
+                            <p class="f14">GIFTS:Mall 가맹상담전화 : 02-123-4568</p>
+                        </div>
+                    </li>
+                    <li class="df fc g20">
+                        <p class="b f20">지방은행구매안전서비스</p>
+                        <div class="df fc g15">
+                            <p style="line-height: 25px;">GIFTS:Mall은 현금 결제한 금액에 대해<br>지방은행과 채무지급보증 계약을체결하여<br>안전한 거래를 보장하고 있습니다</p>
+                            <a href="#" class="cm b f18">서비스 가입사실 확인 ></a>
+                        </div>
+                    </li> 
+                </ul>
+                <div class="sns df jc g10">
+                    <i class="cp fa fa-reddit-square" style="font-size: 30px; color: orange;"></i>
+                    <i class="cp fa fa-facebook-square" style="font-size: 30px; color: blue;"></i>
+                    <i class="cp fa fa-pinterest-square" style="font-size: 30px; color: red;"></i>
+                    <i class="cp fa fa-git-square" style="font-size: 30px; color: orange;"></i>
+                    <i class="cp fa fa-twitter-square" style="font-size: 30px; color: skyblue;"></i>
+                </div>
+                <div class="df jc b" style="border-top: 1px solid gray; padding-top: 50px;">COPYRIGHTⓒ 2024 GIFTS:MALL KOREA INC. ALL RIGHTS RESERVED</div>
+            </div>
+    </div></footer>
+    <div id="alert" class="pf z100 bm cw1 btn1 f20 b" style="top: 50%; left: 50%; translate: -50%;">
+    </div>
+    <script src="./script/allProduct.js"></script>
+</body>
+</html>

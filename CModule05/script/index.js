@@ -28,6 +28,9 @@ const manageNotice = () => {
 
         $noticeList.innerHTML = html;
     }
+    const setEvent = () => {
+
+    }
     const getHtml = (data) => {
         return `
         <li action="noticeCtrl.php" class="cp df ac jsb btn1 bw1 bx2 cp" style="height: 50px;" method="post">

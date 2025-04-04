@@ -1,0 +1,23 @@
+ const products = () => {
+            const $$products = document.querySelectorAll(".products");
+            const state = new Proxy({
+            }, {
+                set(obj, prop, value) {
+                    obj[prop] = value;
+                    render();
+                }
+            })
+            const render = async () => {
+                let data = await fetch("./product.json").then(data => data.json());
+                let html = data.reduce((acc, data) => {
+                    return acc + getHtml(data);
+                });
+            }
+
+            const setEvent = () => {
+
+            }
+            const getHtml = () => {
+
+            }
+        }

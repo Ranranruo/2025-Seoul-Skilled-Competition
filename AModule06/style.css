@@ -1,0 +1,144 @@
+/* 초기화 식 */
+* { margin: 0; padding: 0; text-decoration: none; border: none; color: inherit; box-sizing: border-box; list-style: none; outline: none;}
+:root { color: #333;}
+main {min-height: calc(100vh - 80px);}
+section { padding: 50px 0; }
+button, label, a, select{ cursor: pointer;}
+.inner {max-width: 1400px; padding: 0 15px; margin: 0 auto;}
+.t {font-size: 50px; font-family: 'impact'; font-weight: 400;}
+.w{ width: 100%;} .h{ height: 100%;}
+.df {display: flex;} .jc{ justify-content: center;} .js {justify-content: start;} .je {justify-content: end;} .jsb {justify-content: space-between;}
+.fc {flex-direction: column;} .ae {align-items: end;} .as{ align-items: start;} .ac { align-items: center;}
+.s {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.cm { color: #76f;} .cs { color: #ede6fe} .cw1{ color: #fff} .cw2 {color: #f9fafb} .cw3 {color: #f5f5f5} .cb { color: #333;} .cg {color: #bbb;}
+.bm { background-color: #76f} .bs { background-color: #ede6fe} .bw1{ background-color: #fff} .bw2 {background-color: #f9fafb} .bw3 {background-color: #f5f5f5} .mb {background-color: #333;}
+html { background-color: #f9fafb;}
+
+.g5 { gap: 5px;}
+.g10 { gap: 10px;}
+.g15 { gap: 15px;}
+.g20 { gap: 20px;}
+.g25 { gap: 25px;}
+.g30 { gap: 30px;}
+.g40 { gap: 40px;}
+.g50 { gap: 50px;}
+.g60 { gap: 60px;}
+
+.fw {flex-wrap: wrap;}
+.b { font-weight: bold;}
+.l { font-weight: lighter;}
+
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
+.z3 {z-index: 3;}
+.z100 {z-index: 100;}
+
+.oh { overflow: hidden;}
+.pr {position: relative;}
+.pa {position: absolute;}
+.pf {position: fixed;}
+.tl {top: 0; left: 0;}
+.tr {top: 0; right: 0;}
+.bl {bottom: 0; left: 0;}
+.br {bottom: 0; right: 0;}
+
+.btn1 {padding: .5em 1em;}
+.btn2 {padding: 1em 2em}
+.cp {cursor: pointer;}
+.hd:hover {filter: brightness(.9)}
+.hs {transition: .3s;}
+.hs:hover{ scale: 1.05;}
+
+.f10 {font-size: 10px;}
+.f12{ font-size: 12px;}
+.f14{ font-size: 14px;}
+.f16{ font-size: 16px;}
+.f18{ font-size: 18px;}
+.f20{ font-size: 20px;}
+.f22{ font-size: 22px;}
+.f24{ font-size: 24px;}
+.f26{ font-size: 26px;}
+.f28{ font-size: 28px;}
+.f30{ font-size: 30px;}
+.f40{ font-size: 40px;}
+.f50{ font-size: 50px;}
+.f60{ font-size: 60px;}
+
+.b5 {border-radius: 5px;}
+.b10 {border-radius: 10px;}
+.b100 {border-radius: 100%;}
+
+.bx1 {box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);}
+.bx2 {box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);}
+
+.bi {background-size: cover; background-repeat: no-repeat; background-position: center;}
+
+.menu > *:hover {color: #76f;}
+.drop {height: 0px; transition: .3s .1s;}
+.menu:hover .drop { height: 80px;}
+.drop > *:hover {filter: brightness(.5);}
+
+@keyframes slide {
+    0% { translate: 0 0;}
+    30% { translate: 0 0;}
+    33% { translate: -25% 0;}
+    63% { translate: -25% 0;}
+    66% { translate: -50% 0;}
+    96% { translate: -50% 0;}
+    100% { translate: -75% 0;}    
+}
+
+.slide {animation: slide 10s infinite;}
+
+.price:has(.sale) .sale::before{content: '\\';}
+.price:has(.sale) .origin{ opacity: .5; text-decoration: line-through;}
+.price:not(:has(.sale)) .origin::before{ content: '\\';}
+
+
+.sns i {filter: brightness(.0);}
+.sns i:hover { filter: brightness(1);}
+
+@keyframes fadein {
+    0%{ opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes fadeup {
+    0% {opacity: 0; translate: 0 50%;}
+    100% {opacity: .8; translate: 0;}
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    90% {
+        opacity: 1;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes updown {
+    0%,100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -100%;
+    }
+}
+
+.fadeup3 { opacity: 0; translate: 0 50%; animation: fadeup 2s forwards 1s}
+.fadein1 { opacity: 0; animation: fadein 2s forwards 0s;}
+.fadein2 { opacity: 0; animation: fadein 2s forwards .5s;}
+.fadein3 { opacity: 0; animation: fadein 2s forwards 1s;}
+
+#loading{ opacity: 1; display: flex; animation: loading 3.5s forwards;}
+#loading > *:nth-of-type(1) { translate: 0 0; animation: updown 2s infinite 0s;}
+#loading > *:nth-of-type(2) { translate: 0 0; animation: updown 2s infinite .3s;}
+#loading > *:nth-of-type(3) { translate: 0 0; animation: updown 2s infinite .6s;}
+#loading > *:nth-of-type(4) { translate: 0 0; animation: updown 2s infinite .9s;}
