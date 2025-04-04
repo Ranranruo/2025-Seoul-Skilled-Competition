@@ -313,28 +313,28 @@
                 <h1 class="t" style="font-size: 40px;">Enter Process</h1>
                 <div class="df g20 fw">
                     <div class="g20 cp bw1 hs bx2 b5 btn2 df fc ac" style="width: 211px; height: 250px;">
-                        <i class="cm fa fa-clipboard" style="font-size: 50px;"></i>
+                        <i class="cm fa fa-male" style="font-size: 50px;"></i>
                         <div class="df fc ac g5">
                             <p class="b f20">1.임시회원가입</p>
                             <p class="cg b f14">미거래 업체는 임시회원 가입/로그인 후 상담신청을 하실 수 있습니다.</p>
                         </div>
                     </div>
                     <div class="g20 cp bw1 hs bx2 b5 btn2 df fc ac" style="width: 211px; height: 250px;">
-                        <i class="cm fa fa-clipboard" style="font-size: 50px;"></i>
+                        <i class="cm fa fa-mobile-phone" style="font-size: 50px;"></i>
                         <div class="df fc ac g5">
                             <p class="b f20">2.온라인상담</p>
                             <p class="cg b f14">GIFTS:Mall 입점/제휴를 위해서는 온라인 상담이 선행되어야 합니다. 상담 문의 후 사이트를 통해 결과를 안내해 드립니다.</p>
                         </div>
                     </div>
                     <div class="g20 cp bw1 hs bx2 b5 btn2 df fc ac" style="width: 211px; height: 250px;">
-                        <i class="cm fa fa-clipboard" style="font-size: 50px;"></i>
+                        <i class="cm fa fa-home" style="font-size: 50px;"></i>
                         <div class="df fc ac g5">
                             <p class="b f20">3.방문상담</p>
                             <p class="cg b f14">온라인 상담이 긍정적일 경우, 담당MD/제휴담당자와 구체적인 상담을 진행하게 됩니다.</p>
                         </div>
                     </div>
                     <div class="g20 cp bw1 hs bx2 b5 btn2 df fc ac" style="width: 211px; height: 250px;">
-                        <i class="cm fa fa-clipboard" style="font-size: 50px;"></i>
+                        <i class="cm fa  fa-calendar-check-o" style="font-size: 50px;"></i>
                         <div class="df fc ac g5">
                             <p class="b f20">4.품평회</p>
                             <p class="cg b f14">공정한 평가를 위해 상품력, 기획력, 영업력, 판촉력 등의 항목을 기준으로 내부 품평회를 진행합니다.</p>
@@ -348,7 +348,7 @@
                         </div>
                     </div>
                     <div class="g20 cp bw1 hs bx2 b5 btn2 df fc ac" style="width: 211px; height: 250px;">
-                        <i class="cm fa fa-clipboard" style="font-size: 50px;"></i>
+                        <i class="cm fa fa-group" style="font-size: 50px;"></i>
                         <div class="df fc ac g5">
                             <p class="b f20">6.계약체결</p>
                             <p class="cg b f14">전자계약서(또는 수기계약서)를 통해 거래계약서와 관련서류를 작성하시면 입점절차가 완료됩니다.</p>
