@@ -1,0 +1,163 @@
+<script>
+     const fetchData = async () => await fetch("./product.json").then(data=>data.json());
+        const sales = async () => {
+            const $$productList = document.querySelectorAll(".productList");
+            const state = new Proxy({
+
+            }, {
+                set(obj, prop, value) {
+                    obj[prop] = value;
+                    render();
+                }
+            })
+            const render = async () => {
+                let data = await fetchData();
+                let html = 'default';
+                $$productList.forEach((el) => {
+                    html = data.reduce((acc, data, idx) => {
+                        if(idx % 5 > 2) return acc;
+                        if(data.ct != el.dataset.ct) return acc;
+                        return acc + getHtml(data);
+                    }, '');
+                    el.innerHTML = html;
+                });
+            }
+            const getHtml = (data) => {
+                return `
+                <li class="cp bx2 b10 oh" style="width: 250px;">
+                    <div class="bi df as je g5" style="padding: 10px; aspect-ratio: 1/.7; background-image: url('${data.img}');">
+                    ${data.sale != 0 ? `<p class="f10 bx2 bs cm b5 btn1 b">SALE</p>` : ''}
+                        <p class="f10 bx2 bs cm b5 btn1 b">${data.ct}</p>
+                    </div>
+                    <div class="df fc g5" style="padding: 15px">
+                        <div>
+                            <h1 class="s f20">${data.name}</h1>
+                            <p class="cg s b">${data.desc}</p>
+                        </div>
+                    ${getPrice(data.price, data.sale)}
+<!--                        <div class="btns df jsb g10">
+                            <button class="f14 btn1 b5 bm cw1 b hd">구매하기</button>
+                            <button class="f14 btn1 b5 bw3 cb b hd">장바구니담기</button>
+                        </div>-->
+                    </div>
+                </li>
+                `;
+            }
+            const getPrice = (price, sale) => {
+                if(sale == 0) return `<div class="price df g5 cm b f18"><div class="origin">${price.toLocaleString()}</div></div>`;
+                return `<div class="price df g5 cm b f18"><div class="origin">${price.toLocaleString()}</div><div class="sale">${(sale == 10000 ? price - 10000 : price - (price * sale)).toLocaleString()}</div></div>`;
+            }
+            render();
+        }
+        sales();
+</script>
+
+// all
+<script>
+    const fetchData = async () => await fetch("./product.json").then(data=>data.json());
+       const sales = async () => {
+           const $$productList = document.querySelectorAll(".productList");
+           const state = new Proxy({
+
+           }, {
+               set(obj, prop, value) {
+                   obj[prop] = value;
+                   render();
+               }
+           })
+           const render = async () => {
+               let data = await fetchData();
+               let html = 'default';
+               data = data.toSorted((a, b) => (b.sale != 0) - (a.sale != 0));
+               $$productList.forEach((el) => {
+                   html = data.reduce((acc, data, idx) => {
+                       if(data.ct != el.dataset.ct) return acc;
+                       return acc + getHtml(data);
+                   }, '');
+                   el.innerHTML = html;
+               });
+           }
+           const getHtml = (data) => {
+               return `
+               <li class="cp bx2 b10 oh" style="width: 250px;">
+                   <div class="bi df as je g5" style="padding: 10px; aspect-ratio: 1/.7; background-image: url('${data.img}');">
+                   ${data.sale != 0 ? `<p class="f10 bx2 bs cm b5 btn1 b">SALE</p>` : ''}
+                       <p class="f10 bx2 bs cm b5 btn1 b">${data.ct}</p>
+                   </div>
+                   <div class="df fc g10" style="padding: 15px">
+                       <div>
+                           <h1 class="s f20">${data.name}</h1>
+                           <p class="cg s b">${data.desc}</p>
+                       </div>
+                   ${getPrice(data.price, data.sale)}
+                        <div class="btns df jsb g10">
+                           <button class="f14 btn1 b5 bm cw1 b hd">구매하기</button>
+                           <button class="f14 btn1 b5 bw3 cb b hd">장바구니담기</button>
+                       </div>
+                   </div>
+               </li>
+               `;
+           }
+           const getPrice = (price, sale) => {
+               if(sale == 0) return `<div class="price df g5 cm b f18"><div class="origin">${price.toLocaleString()}</div></div>`;
+               return `<div class="price df g5 cm b f18"><div class="origin">${price.toLocaleString()}</div><div class="sale">${(sale == 10000 ? price - 10000 : price - (price * sale)).toLocaleString()}</div></div>`;
+           }
+           render();
+       }
+       sales();
+</script>
+
+//bestProduct
+<script>
+    const fetchData = async () => await fetch("./product.json").then(data=>data.json());
+       const sales = async () => {
+           const $$productList = document.querySelectorAll(".productList");
+           const state = new Proxy({
+
+           }, {
+               set(obj, prop, value) {
+                   obj[prop] = value;
+                   render();
+               }
+           })
+           const render = async () => {
+               let data = await fetchData();
+               let html = 'default';
+               data = data.filter(data => data.sale != 0)
+               $$productList.forEach((el) => {
+                   html = data.reduce((acc, data, idx) => {
+                       if(data.ct != el.dataset.ct) return acc;
+                       return acc + getHtml(data);
+                   }, '');
+                   el.innerHTML = html;
+               });
+           }
+           const getHtml = (data) => {
+               return `
+               <li class="cp bx2 b10 oh" style="width: 250px;">
+                   <div class="bi df as je g5" style="padding: 10px; aspect-ratio: 1/.7; background-image: url('${data.img}');">
+                   ${data.sale != 0 ? `<p class="f10 bx2 bs cm b5 btn1 b">SALE</p>` : ''}
+                       <p class="f10 bx2 bs cm b5 btn1 b">${data.ct}</p>
+                   </div>
+                   <div class="df fc g10" style="padding: 15px">
+                       <div>
+                           <h1 class="s f20">${data.name}</h1>
+                           <p class="cg s b">${data.desc}</p>
+                       </div>
+                   ${getPrice(data.price, data.sale)}
+                        <div class="btns df jsb g10">
+                           <button class="f14 btn1 b5 bm cw1 b hd">구매하기</button>
+                           <button class="f14 btn1 b5 bw3 cb b hd">장바구니담기</button>
+                       </div>
+                   </div>
+               </li>
+               `;
+           }
+           const getPrice = (price, sale) => {
+               if(sale == 0) return `<div class="price df g5 cm b f18"><div class="origin">${price.toLocaleString()}</div></div>`;
+               return `<div class="price df g5 cm b f18"><div class="origin">${price.toLocaleString()}</div><div class="sale">${(sale == 10000 ? price - 10000 : price - (price * sale)).toLocaleString()}</div></div>`;
+           }
+           render();
+       }
+       sales();
+</script>
