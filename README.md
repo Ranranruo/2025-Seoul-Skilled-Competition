@@ -81,4 +81,59 @@ if($action == 'delete') {
 }
 ?>
 ```
-a
+
+
+```
+// php uill
+<?php
+class R {
+    static $r = [];
+    static function on($m, $u, $f) {
+        $uri = preg_replace("#\{(.*?)\}#", "([^\/]+)", $u);
+        self::$r[] = [$m, "#^$uri$#", $f];
+    }
+    static function run() {
+        $reqM = $_SERVER['REQUEST_METHOD'];
+        $reqU = $_SERVER['REQUEST_URI'];
+        foreach(self::$r as [$m, $u, $f]) {
+            if($m != $reqM) continue;
+            if(preg_match($u, $reqU, $mat)) {
+                array_shift($mat);
+                call_user_func_array($f, $mat);
+                return;
+            }
+        }
+    }
+}
+
+function GET($u, $f) { R::on("GET", $u, $f); }
+function POST($u, $f) { R::on("POST", $u, $f); }
+function PUT($u, $f) { R::on("PUT", $u, $f); }
+function DELETE($u, $f) { R::on("DELETE", $u, $f); }
+
+<?php
+class DB {
+    static function getDB() {
+        return new PDO("mysql:host=localhost;dbname=test;chartset=utf8mb4", "root", "", [19=>5, 3=>2]);
+    }
+    static function fetch($q, $p = []) {
+        $s = self::getDB()->prepare($q);
+        $s->execute($p);
+        return $s->fetch();
+    }
+    static function fetchAll($q, $p = []) {
+        $s = self::getDB()->prepare($q);
+        $s->execute($p);
+        return $s->fetchAll();
+    }
+    static function exec($q, $p = []) {
+        $s = self::getDB()->prepare($q);
+        $s->execute($p);
+        return true;
+    }
+}
+
+//engine
+RewriteEngine On
+RewriteRule . index.php$1 [L]
+```
