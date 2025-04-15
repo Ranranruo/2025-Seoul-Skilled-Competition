@@ -137,4 +137,3 @@ class DB {
 RewriteEngine On
 RewriteRule . index.php$1 [L]
 ```
-z
